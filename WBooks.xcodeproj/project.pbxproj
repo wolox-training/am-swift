@@ -124,7 +124,6 @@
 		D38D692528D8B7CF0037B1B4 = {
 			isa = PBXGroup;
 			children = (
-				D31275B728DA52C30007F183 /* Library.swift */,
 				D38D693028D8B7CF0037B1B4 /* WBooks */,
 				D38D694728D8B7E30037B1B4 /* WBooksTests */,
 				D38D695128D8B7E30037B1B4 /* WBooksUITests */,
@@ -147,12 +146,13 @@
 		D38D693028D8B7CF0037B1B4 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D31275B728DA52C30007F183 /* Library.swift */,
+				D31275B528DA515D0007F183 /* LibraryTableViewController.swift */,
+				D31275B328DA51310007F183 /* LibraryTableViewCell.swift */,
 				D38D693128D8B7CF0037B1B4 /* AppDelegate.swift */,
 				D38D693328D8B7CF0037B1B4 /* SceneDelegate.swift */,
 				D38D693528D8B7CF0037B1B4 /* ViewController.swift */,
 				D38D693728D8B7CF0037B1B4 /* Main.storyboard */,
-				D31275B328DA51310007F183 /* LibraryTableViewCell.swift */,
-				D31275B528DA515D0007F183 /* LibraryTableViewController.swift */,
 				D38D693A28D8B7E20037B1B4 /* Assets.xcassets */,
 				D38D693C28D8B7E20037B1B4 /* LaunchScreen.storyboard */,
 				D38D693F28D8B7E20037B1B4 /* Info.plist */,
