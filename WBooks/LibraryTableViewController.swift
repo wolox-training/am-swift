@@ -18,6 +18,7 @@ class LibraryTableViewController: UIViewController {
         libraryTableView.delegate = self
         libraryTableView.dataSource = self
         loadSampleLibrarys()
+        
     }
 
     
