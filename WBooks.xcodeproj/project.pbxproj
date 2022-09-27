@@ -13,6 +13,7 @@
 		D31275B428DA51310007F183 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31275B328DA51310007F183 /* LibraryTableViewCell.swift */; };
 		D31275B628DA515D0007F183 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31275B528DA515D0007F183 /* LibraryTableViewController.swift */; };
 		D31275B828DA52C30007F183 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31275B728DA52C30007F183 /* Library.swift */; };
+		D31EE8FF28DF399300534C48 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31EE8FE28DF399300534C48 /* NavigationViewController.swift */; };
 		D38D693228D8B7CF0037B1B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38D693128D8B7CF0037B1B4 /* AppDelegate.swift */; };
 		D38D693428D8B7CF0037B1B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38D693328D8B7CF0037B1B4 /* SceneDelegate.swift */; };
 		D38D693628D8B7CF0037B1B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38D693528D8B7CF0037B1B4 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		D31275B328DA51310007F183 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		D31275B528DA515D0007F183 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		D31275B728DA52C30007F183 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		D31EE8FE28DF399300534C48 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		D38D692E28D8B7CF0037B1B4 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38D693128D8B7CF0037B1B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38D693328D8B7CF0037B1B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				D31275B728DA52C30007F183 /* Library.swift */,
 				D31275B528DA515D0007F183 /* LibraryTableViewController.swift */,
 				D31275B328DA51310007F183 /* LibraryTableViewCell.swift */,
+				D31EE8FE28DF399300534C48 /* NavigationViewController.swift */,
 				D38D693128D8B7CF0037B1B4 /* AppDelegate.swift */,
 				D38D693328D8B7CF0037B1B4 /* SceneDelegate.swift */,
 				D38D693528D8B7CF0037B1B4 /* ViewController.swift */,
@@ -430,6 +433,7 @@
 				D31275B428DA51310007F183 /* LibraryTableViewCell.swift in Sources */,
 				D38D693228D8B7CF0037B1B4 /* AppDelegate.swift in Sources */,
 				D38D693428D8B7CF0037B1B4 /* SceneDelegate.swift in Sources */,
+				D31EE8FF28DF399300534C48 /* NavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

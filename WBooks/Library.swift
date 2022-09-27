@@ -15,11 +15,9 @@ class Library {
     var photo: UIImage?
     var name2: String
     
-    
     //MARK: Initialization
     
     init(name: String, photo: UIImage?, name2: String) {
-        
         self.name = name
         self.photo = photo
         self.name2 = name2
