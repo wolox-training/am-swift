@@ -1,13 +1,13 @@
 //
-//  NavigationViewController.swift
+//  WishListViewController.swift
 //  WBooks
 //
-//  Created by ana.mancuso on 24/09/2022.
+//  Created by ana.mancuso on 27/09/2022.
 //
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+class WishListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +15,7 @@ class NavigationViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
+
     /*
     // MARK: - Navigation
 

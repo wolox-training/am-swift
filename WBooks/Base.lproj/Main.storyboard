@@ -57,7 +57,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="singinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="byp-sW-QE6"/>
-                                            <segue destination="BKV-qc-tGN" kind="show" id="USv-62-TTI"/>
+                                            <segue destination="BKV-qc-tGN" kind="show" id="yZe-CX-MuF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -115,21 +115,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-Ur-9NQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-Ur-9NQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" red="0.94158953430000003" green="0.97607094049999998" blue="0.99608176950000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <tabBar key="tableFooterView" contentMode="scaleToFill" id="5gc-Zl-0Tu">
-                                    <rect key="frame" x="0.0" y="178" width="375" height="49"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <items>
-                                        <tabBarItem title="Library" image="books.vertical" catalog="system" id="ksy-58-XME" userLabel="Library Button"/>
-                                        <tabBarItem title="Wishlist" image="star.leadinghalf.filled" catalog="system" id="CfY-Rv-7CR"/>
-                                        <tabBarItem title="Add New" image="plus.circle" catalog="system" id="Ish-aE-AFi"/>
-                                        <tabBarItem title="Rentals" image="checkmark.diamond" catalog="system" id="6aY-q4-jYt"/>
-                                    </items>
-                                </tabBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LibraryTableViewCell" rowHeight="100" id="Z07-6h-Ji0" customClass="LibraryTableViewCell" customModule="WBooks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="100"/>
@@ -218,20 +207,21 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="libraryTableView" destination="QZ8-Ur-9NQ" id="AcN-n9-ll5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YZ-F9-ZRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028.985507246377" y="-2.4456521739130435"/>
+            <point key="canvasLocation" x="1641" y="-2"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="PqR-80-tWc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKV-qc-tGN" customClass="NavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TBg-SX-4m0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="fFa-fm-Hkl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -241,29 +231,19 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qf8-p5-FcZ" kind="relationship" relationship="rootViewController" id="SaP-59-2CD"/>
+                        <segue destination="qf8-p5-FcZ" kind="relationship" relationship="rootViewController" id="2ef-qN-Aly"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95Y-fF-O7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="UAh-FB-7PT" customClass="CustomNavigationBar" customModule="WBooks" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <viewLayoutGuide key="safeArea" id="vtZ-Ka-NNj"/>
-                    <color key="backgroundColor" red="0.30117672680000002" green="0.66876661780000002" blue="0.90983456370000004" alpha="0.60281311439362584" colorSpace="custom" customColorSpace="displayP3"/>
-                </view>
             </objects>
-            <point key="canvasLocation" x="1153" y="-19"/>
+            <point key="canvasLocation" x="881" y="-2"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
         <image name="Image" width="66" height="50"/>
         <image name="bell" catalog="system" width="125" height="128"/>
-        <image name="books.vertical" catalog="system" width="128" height="107"/>
-        <image name="checkmark.diamond" catalog="system" width="128" height="124"/>
         <image name="defectImage" width="225" height="225"/>
-        <image name="plus.circle" catalog="system" width="128" height="123"/>
-        <image name="star.leadinghalf.filled" catalog="system" width="128" height="116"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

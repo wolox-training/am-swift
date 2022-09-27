@@ -62,11 +62,7 @@ extension LibraryTableViewController: UITableViewDelegate, UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LibraryTableViewCell  else {
             fatalError("The dequeued cell is not an instance of LibraryTableViewCell.")
         }
-        let librarys = library?[indexPath.row]
-        
-        cell.nameLabel.text = librarys?.name
-        cell.photoImageView.image = librarys?.photo
-        cell.nameLabel2.text = librarys?.name2
+        cell.setupData(library: library?[indexPath.row])
 
         return cell
     }

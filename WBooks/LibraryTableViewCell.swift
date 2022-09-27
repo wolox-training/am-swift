@@ -20,6 +20,7 @@ class LibraryTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -27,4 +28,10 @@ class LibraryTableViewCell: UITableViewCell {
         libraryView.layer.cornerRadius = 10
     }
 
+    func setupData(library: Library?) {
+        nameLabel.text = library?.name
+        photoImageView.image = library?.photo
+        nameLabel2.text = library?.name2
+    }
+    
 }
