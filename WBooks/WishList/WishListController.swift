@@ -15,6 +15,8 @@ class WishListController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_VIEW_WISHLIST", comment: "")
+        
     }
     
     override func loadView() {

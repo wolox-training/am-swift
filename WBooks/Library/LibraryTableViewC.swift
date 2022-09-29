@@ -34,9 +34,9 @@ class LibraryTableViewC: UIViewController {
         }
          
     func configTableView() {
-        libraryViewC.libraryTableView.delegate = self
-        libraryViewC.libraryTableView.dataSource = self
-        libraryViewC.libraryTableView.registerCell(cellType: LibraryTableViewCell.self)
+        libraryViewC.tableView.delegate = self
+        libraryViewC.tableView.dataSource = self
+        libraryViewC.tableView.registerCell(cellType: LibraryTableViewCell.self)
         libraryTableViewModel.loadSampleLibrarys()
     }
         

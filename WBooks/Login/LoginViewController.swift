@@ -33,10 +33,11 @@ class LoginViewController: UIViewController {
     }
 
     //MARK: Action
+    
     @objc func singinButtonAction() {
-        //        let LibraryTableView = LibraryTableViewC(viewModel: viewModel.createViewModelLibrary())
         let tabBar = TabBarController()
-        navigationController?.setViewControllers([tabBar], animated: true)
+        UIApplication.shared.windows.first?.rootViewController = tabBar
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
         
     }
     

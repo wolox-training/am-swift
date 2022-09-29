@@ -19,6 +19,7 @@ class LibraryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        backgroundColor = .clear
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,6 +33,11 @@ class LibraryTableViewCell: UITableViewCell {
         photoBookView.image = library?.photo
         autorBookName.text = library?.name2
         libraryView.layer.cornerRadius = 10
+        libraryView.layer.shadowColor = UIColor.darkGray.cgColor
+        libraryView.layer.shadowRadius = 3
+        libraryView.layer.shadowOpacity = 0.2
+        libraryView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
+        libraryView.layer.masksToBounds = false
     }
     
 }
