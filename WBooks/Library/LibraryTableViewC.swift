@@ -20,24 +20,27 @@ class LibraryTableViewC: UIViewController {
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
+    
         override func viewDidLoad() {
             super.viewDidLoad()
 
-            libraryViewC.libraryTableView.delegate = self
-            libraryViewC.libraryTableView.dataSource = self
-            libraryViewC.libraryTableView.registerCell(cellType: LibraryTableViewCell.self)
-            libraryTableViewModel.loadSampleLibrarys()
+            navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_VIEW_LIBRARY", comment: "")
+            configTableView()
+            
         }
         
         override func loadView() {
             view = libraryViewC
         }
          
-         //MARK: Private Methods
-          
-        
-        
+    func configTableView() {
+        libraryViewC.libraryTableView.delegate = self
+        libraryViewC.libraryTableView.dataSource = self
+        libraryViewC.libraryTableView.registerCell(cellType: LibraryTableViewCell.self)
+        libraryTableViewModel.loadSampleLibrarys()
     }
+        
+}
 extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Table view data source
