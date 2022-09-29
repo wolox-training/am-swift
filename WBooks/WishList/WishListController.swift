@@ -1,20 +1,28 @@
 //
-//  NavigationViewController.swift
+//  WishListController.swift
 //  WBooks
 //
-//  Created by ana.mancuso on 24/09/2022.
+//  Created by ana.mancuso on 28/09/2022.
 //
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+class WishListController: UIViewController {
 
+    private lazy var wishlistView = WishListView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func loadView() {
+        view = wishlistView
+    }
+
+    
+
     /*
     // MARK: - Navigation
 

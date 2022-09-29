@@ -1,5 +1,5 @@
 //
-//  LibraryTableViewCell.swift
+//  LibraryTableViewCellController.swift
 //  WBooks
 //
 //  Created by ana.mancuso on 20/09/2022.
@@ -9,12 +9,12 @@ import UIKit
 
 class LibraryTableViewCell: UITableViewCell {
 
-    //MARK: Properties
-    
+//    MARK: Propieties
     @IBOutlet weak var libraryView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var nameLabel2: UILabel!
+    @IBOutlet weak var nameBookLabel: UILabel!
+    @IBOutlet weak var photoBookView: UIImageView!
+    @IBOutlet weak var autorBookName: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,13 +25,14 @@ class LibraryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        libraryView.layer.cornerRadius = 10
     }
 
     func setupData(library: Library?) {
-        nameLabel.text = library?.name
-        photoImageView.image = library?.photo
-        nameLabel2.text = library?.name2
+        nameBookLabel.text = library?.name
+        photoBookView.image = library?.photo
+        autorBookName.text = library?.name2
+        libraryView.layer.cornerRadius = 10
     }
     
 }
+
