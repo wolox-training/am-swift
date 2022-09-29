@@ -23,8 +23,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         loginView.singinButton.addTarget(self, action:#selector(singinButtonAction), for: .touchUpInside)
     }
     
@@ -38,7 +36,6 @@ class LoginViewController: UIViewController {
         let tabBar = TabBarController()
         UIApplication.shared.windows.first?.rootViewController = tabBar
         UIApplication.shared.windows.first?.makeKeyAndVisible()
-        
     }
     
 }

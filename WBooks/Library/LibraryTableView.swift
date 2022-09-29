@@ -15,6 +15,7 @@ final class LibraryTableView: NibView {
             tableView.separatorStyle = .none
         }
     }
+    
     @IBOutlet var generalView: UIView! {
         didSet {
             generalView.backgroundColor = UIColor(red: 236/255, green: 248/255, blue: 255/255, alpha: 1)

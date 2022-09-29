@@ -19,13 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-
-                window?.windowScene = windowScene
+        window?.windowScene = windowScene
         
         let loginViewController = LoginViewController(viewModel: LoginViewModel())
         window?.rootViewController = loginViewController
-
-                window?.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

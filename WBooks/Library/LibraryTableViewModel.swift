@@ -27,4 +27,5 @@ class LibraryTableViewModel {
         library = [cover1, cover2, cover3, cover4, cover5]
          
      }
+    
 }

@@ -21,7 +21,7 @@ class Library {
         self.name = name
         self.photo = photo
         self.name2 = name2
-        }
+    }
     
 }
 
