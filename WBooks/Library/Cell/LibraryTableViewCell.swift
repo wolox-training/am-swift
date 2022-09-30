@@ -9,7 +9,7 @@ import UIKit
 
 class LibraryTableViewCell: UITableViewCell {
 
-//    MARK: Propieties
+//    MARK: Properties
     @IBOutlet weak var libraryView: UIView!
     @IBOutlet weak var nameBookLabel: UILabel!
     @IBOutlet weak var photoBookView: UIImageView!
