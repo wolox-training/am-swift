@@ -11,6 +11,7 @@ class LibraryTableViewCell: UITableViewCell {
 
     //MARK: Properties
     
+    @IBOutlet weak var libraryView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nameLabel2: UILabel!
@@ -19,11 +20,18 @@ class LibraryTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        libraryView.layer.cornerRadius = 10
     }
 
+    func setupData(library: Library?) {
+        nameLabel.text = library?.name
+        photoImageView.image = library?.photo
+        nameLabel2.text = library?.name2
+    }
+    
 }

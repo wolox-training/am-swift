@@ -1,0 +1,24 @@
+
+/* Class = "UIViewController"; title = "Login"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Login";
+
+/* Class = "UINavigationItem"; title = "LIBRARY"; ObjectID = "DfN-hg-rPV"; */
+"DfN-hg-rPV.title" = "BIBLIOTECA";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Fcr-wd-3vB"; */
+"Fcr-wd-3vB.text" = "Label";
+
+/* Class = "UILabel"; text = "label"; ObjectID = "LB5-0c-THj"; */
+"LB5-0c-THj.text" = "label";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "fNg-hd-AbN"; */
+"fNg-hd-AbN.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "nEO-Zo-8MM"; */
+"nEO-Zo-8MM.placeholder" = "Username";
+
+/* Class = "UIButton"; configuration.title = "SIGN IN"; ObjectID = "tCq-Vh-zQj"; */
+"tCq-Vh-zQj.configuration.title" = "INGRESAR";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tCq-Vh-zQj"; */
+"tCq-Vh-zQj.normalTitle" = "Button";
