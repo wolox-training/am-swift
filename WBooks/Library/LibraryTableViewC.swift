@@ -26,6 +26,9 @@ class LibraryTableViewC: UIViewController {
 
         navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_VIEW_LIBRARY", comment: "")
         configTableView()
+        libraryTableViewModel.changeList = { [weak self] in
+            self?.libraryViewC.tableView.reloadData()
+        }
     }
     
     override func loadView() {
@@ -66,5 +69,12 @@ extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
         return true
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let libraryT = libraryTableViewModel.library[indexPath.row]
+        let detailsViewModel = DetailsViewModel(bookDetails: libraryT)
+        let detailsViewController = DetailsViewController(detailsViewModel: detailsViewModel)
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
 }
 

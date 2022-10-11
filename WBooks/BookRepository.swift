@@ -4,15 +4,14 @@
 //
 //  Created by ana.mancuso on 30/09/2022.
 //
-import Result
 import Alamofire
 
 class BookRepository {
     
-func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
+func fetchBooks(onSuccess: @escaping ([Library]) -> Void, onError: @escaping (Error) -> Void) {
         let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/books")!
 
-        request(url, method: .get).responseJSON { response in
+    AF.request(url, method: .get).responseJSON { response in
 
             switch response.result {
             case .success(let value):
@@ -21,7 +20,7 @@ func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error
                     return
                 }
 
-                guard let books = try? JSONDecoder().decode([Book].self, from: JSONbooks) else {
+                guard let books = try? JSONDecoder().decode([Library].self, from: JSONbooks) else {
                     onError(BookError.decodeError)
                     return
                 }

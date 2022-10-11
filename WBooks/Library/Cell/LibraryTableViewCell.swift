@@ -1,5 +1,5 @@
 //
-//  LibraryTableViewCellController.swift
+//  LibraryTableViewCell.swift
 //  WBooks
 //
 //  Created by ana.mancuso on 20/09/2022.
@@ -32,9 +32,25 @@ class LibraryTableViewCell: UITableViewCell {
 
     func setupData(library: Library?) {
         nameBookLabel.text = library?.name
-        photoBookView.image = library?.photo
         autorBookName.text = library?.name2
+        imageFromUrl(urlString: library?.photo ?? "")
     }
     
+    func imageFromUrl(urlString: String) {
+            if let url = URL(string: (urlString.contains("https")) ? urlString : urlString.replacingOccurrences(of: "http", with: "https")) {
+                let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                    guard let data = data, error == nil else {
+                        DispatchQueue.main.async {
+                            self.photoBookView.image = UIImage(named: "Cover1")
+                        }
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.photoBookView.image = UIImage(data: data)
+                    }
+                }
+                task.resume()
+            }
+        }
 }
 
