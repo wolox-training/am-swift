@@ -42,24 +42,7 @@ class ReviewTableViewCell: UITableViewCell {
     func setupReviewData(reviewer: Reviewer?) {
         nameReviewer.text = reviewer?.name
         commentReviewer.text = reviewer?.comment
-        imageFromUrl(urlString: reviewer?.photo ?? "")
+        self.iconReviewer?.downloaded(from: reviewer?.photo ?? "")
     }
-    
-    func imageFromUrl(urlString: String) {
-            if let url = URL(string: (urlString.contains("https")) ? urlString : urlString.replacingOccurrences(of: "http", with: "https")) {
-                let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                    guard let data = data, error == nil else {
-                        DispatchQueue.main.async {
-                            self.iconReviewer.image = UIImage(named: "Cover1")
-                        }
-                        return
-                    }
-                    DispatchQueue.main.async {
-                        self.iconReviewer.image = UIImage(data: data)
-                    }
-                }
-                task.resume()
-            }
-        }
     
 }

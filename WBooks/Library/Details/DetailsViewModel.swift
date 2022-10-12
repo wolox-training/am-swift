@@ -13,11 +13,8 @@ class DetailsViewModel {
     private let reviewRepository: ReviewRepository
     var changeList: (() -> Void)?
     
-    init(bookDetails: Library) {
+    init(bookDetails: Library, reviewRepository: ReviewRepository = ReviewRepository()) {
         self.bookDetails = bookDetails
-    }
-    
-    init(reviewRepository: ReviewRepository = ReviewRepository()) {
         self.reviewRepository = reviewRepository
     }
     
@@ -32,6 +29,7 @@ class DetailsViewModel {
             print(errorLista.localizedDescription)
         }
      }
+    
 }
 
 

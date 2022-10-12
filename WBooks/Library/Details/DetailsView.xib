@@ -16,9 +16,10 @@
                 <outlet property="bookImage" destination="bo3-a7-PoL" id="uS2-aD-SMV"/>
                 <outlet property="bookName" destination="iXo-f8-7NL" id="qu2-cY-tRT"/>
                 <outlet property="bookView" destination="Dn6-3n-8M5" id="DsV-Th-OcC"/>
-                <outlet property="detailsBackground" destination="iN0-l3-epB" id="6HV-cu-Lk8"/>
+                <outlet property="detailsBackground" destination="iN0-l3-epB" id="ZIn-Gn-bVT"/>
                 <outlet property="genreBook" destination="TEX-Vd-SzH" id="Tg4-tj-HAe"/>
                 <outlet property="rentButtonFormat" destination="aPk-5r-DqO" id="8eq-2e-fKZ"/>
+                <outlet property="tableView" destination="dIf-YM-qOV" id="zjk-hl-7xo"/>
                 <outlet property="yearBook" destination="bVx-fn-WXG" id="vie-Ut-LXF"/>
             </connections>
         </placeholder>
@@ -120,6 +121,7 @@
                             <buttonConfiguration key="configuration" style="plain" title="RENT" cornerStyle="capsule">
                                 <backgroundConfiguration key="background"/>
                                 <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="rentButton:" destination="-1" eventType="touchUpInside" id="dTO-VR-mWb"/>

@@ -33,6 +33,7 @@
 		D37F17FE28F70AC80056A259 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F17FD28F70AC80056A259 /* ReviewTableViewCell.swift */; };
 		D37F180028F70DDC0056A259 /* Reviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F17FF28F70DDC0056A259 /* Reviewer.swift */; };
 		D37F180228F70F9E0056A259 /* ReviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F180128F70F9E0056A259 /* ReviewRepository.swift */; };
+		D37F180828F7315B0056A259 /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F180728F7315B0056A259 /* ImageUrl.swift */; };
 		D386341828E745420063F5FC /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386341728E745420063F5FC /* BookRepository.swift */; };
 		D386341A28E74ED10063F5FC /* LibraryTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386341928E74ED10063F5FC /* LibraryTableViewModel.swift */; };
 		D386341D28E74F6B0063F5FC /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386341C28E74F6B0063F5FC /* DetailsView.swift */; };
@@ -105,6 +106,7 @@
 		D37F17FD28F70AC80056A259 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		D37F17FF28F70DDC0056A259 /* Reviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewer.swift; sourceTree = "<group>"; };
 		D37F180128F70F9E0056A259 /* ReviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRepository.swift; sourceTree = "<group>"; };
+		D37F180728F7315B0056A259 /* ImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
 		D386341728E745420063F5FC /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		D386341928E74ED10063F5FC /* LibraryTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewModel.swift; sourceTree = "<group>"; };
 		D386341C28E74F6B0063F5FC /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				D3929C9228DE169000F6CAE6 /* Localizable.strings */,
 				D38D693C28D8B7E20037B1B4 /* LaunchScreen.storyboard */,
 				D38D693F28D8B7E20037B1B4 /* Info.plist */,
+				D37F180728F7315B0056A259 /* ImageUrl.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				D386341A28E74ED10063F5FC /* LibraryTableViewModel.swift in Sources */,
 				D32F777528E4D045003130A8 /* TabBarController.swift in Sources */,
 				D398C68028E378AF0025DE95 /* LoginViewController.swift in Sources */,
+				D37F180828F7315B0056A259 /* ImageUrl.swift in Sources */,
 				D32F777E28E4D173003130A8 /* WishListController.swift in Sources */,
 				D37F180228F70F9E0056A259 /* ReviewRepository.swift in Sources */,
 				D32F778428E4D4E7003130A8 /* AddNewView.swift in Sources */,

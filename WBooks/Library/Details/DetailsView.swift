@@ -9,7 +9,7 @@ import UIKit
 
 final class DetailsView: NibView {
     
-//MARK: Properties
+    //MARK: Properties
     @IBOutlet var detailsBackground: UIView! {
         didSet {
             detailsBackground.backgroundColor = UIColor(red: 236/255, green: 248/255, blue: 255/255, alpha: 1)
@@ -38,7 +38,6 @@ final class DetailsView: NibView {
             authorBook.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
         }
     }
-    
     @IBOutlet var yearBook: UILabel! {
         didSet {
             yearBook.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
@@ -51,24 +50,34 @@ final class DetailsView: NibView {
     }
     @IBOutlet var rentButtonFormat: UIButton! {
             didSet {
-                rentButtonFormat.tintColor = (availabilityBook.text == "Unavailable") ? .gray : UIColor(red: 30/255, green: 172/255, blue: 183/255, alpha: 1)
+                rentButtonFormat.backgroundColor = (availabilityBook.text == "Unavailable") ? .gray : UIColor(red: 30/255, green: 172/255, blue: 183/255, alpha: 1)
                 rentButtonFormat.setTitleColor(.white, for: UIControl.State())
+                rentButtonFormat.layer.cornerRadius = 23
             }
     }
+    @IBOutlet var tableView: UITableView!
     
-//    MARK: Action
+    //MARK: Action
     @IBAction func addButton(_ sender: UIButton) {
     }
-    
     @IBAction func rentButton(_ sender: UIButton) {
-        var availableToF = (availabilityBook.text.self != nil) ? "Available" : "Unavailable"
+        let availableToF = (availabilityBook.text.self != nil) ? "Available" : "Unavailable"
         let tabBar = TabBarController()
+        let alert = UIAlertController(title: "ERROR", message: NSLocalizedString("COMMENT_BOOKED_ERROR", comment: ""), preferredStyle: .alert)
+        let noti = UIAlertController(title: "SUCCESS!", message: NSLocalizedString("COMMENT_BOOKED_SUCCESFULLY", comment: ""), preferredStyle: .alert)
         if availableToF == "true" {
-            print("COMMENT_BOOKED_SUCCESSFULLY")
-            let detailsViewController = DetailsViewController()
-            detailsViewController.goToRentals()
+            noti.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+//            self.present(noti, animated: true, completion: nil)
+//            let detailsViewModel = DetailsViewModel.init(bookDetails: Library)
+//            let detailsViewController = DetailsViewController(detailsViewModel: detailsViewModel)
+//            detailsViewController.goToRentals()
         } else {
-            print("COMMENT_BOOKED_ERROR")
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+//            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -78,24 +87,8 @@ final class DetailsView: NibView {
         availabilityBook.text = ((library?.status) != nil) ? "Available" : "Unavailable"
         yearBook.text = library?.year
         genreBook.text = library?.genre
-        imageFromUrl(urlString: library?.photo ?? "")
+        self.bookImage?.downloaded(from: library?.photo ?? "")
     }
-    func imageFromUrl(urlString: String) {
-            if let url = URL(string: (urlString.contains("https")) ? urlString : urlString.replacingOccurrences(of: "http", with: "https")) {
-                let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                    guard let data = data, error == nil else {
-                        DispatchQueue.main.async {
-                            self.bookImage.image = UIImage(named: "Cover1")
-                        }
-                        return
-                    }
-                    DispatchQueue.main.async {
-                        self.bookImage.image = UIImage(data: data)
-                    }
-                }
-                task.resume()
-            }
-        }
     
 }
 

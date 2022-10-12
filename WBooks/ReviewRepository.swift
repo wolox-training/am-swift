@@ -20,12 +20,12 @@ func fetchBooks(onSuccess: @escaping ([Reviewer]) -> Void, onError: @escaping (E
                     return
                 }
 
-                guard let comments = try? JSONDecoder().decode([Reviewer].self, from: JSONbooks) else {
+                guard let user = try? JSONDecoder().decode([Reviewer].self, from: JSONbooks) else {
                     onError(commentsError.decodeError)
                     return
                 }
 
-                onSuccess(comments)
+                onSuccess(user)
 
             case .failure(let error):
                 onError(error)

@@ -74,6 +74,7 @@ extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
         let detailsViewModel = DetailsViewModel(bookDetails: libraryT)
         let detailsViewController = DetailsViewController(detailsViewModel: detailsViewModel)
         navigationController?.pushViewController(detailsViewController, animated: true)
+        navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
     }
     
 }
