@@ -29,7 +29,11 @@ class DetailsViewController: UIViewController {
     override func loadView() {
         view = detailsV
     }
-       
-    
 
+    func goToRentals() {
+        let rentalsViewModel = RentalsViewModel()
+        let rentalsViewController = RentalsController(viewModel: rentalsViewModel)
+        navigationController?.pushViewController(rentalsViewController, animated: true)
+    }
+    
 }

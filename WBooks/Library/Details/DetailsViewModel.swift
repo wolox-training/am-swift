@@ -9,11 +9,29 @@ import UIKit
 class DetailsViewModel {
     
     let bookDetails: Library
+    var reviewer = [Reviewer]()
+    private let reviewRepository: ReviewRepository
+    var changeList: (() -> Void)?
     
     init(bookDetails: Library) {
         self.bookDetails = bookDetails
     }
     
+    init(reviewRepository: ReviewRepository = ReviewRepository()) {
+        self.reviewRepository = reviewRepository
+    }
+    
+    func loadSampleLibrarys() {
+        reviewRepository.fetchBooks { [weak self] comments in
+            guard let selfAux = self else {
+                return
+            }
+            selfAux.reviewer = comments
+            selfAux.changeList?()
+        } onError: { errorLista in
+            print(errorLista.localizedDescription)
+        }
+     }
 }
 
 

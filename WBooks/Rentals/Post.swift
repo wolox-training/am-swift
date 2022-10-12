@@ -1,12 +1,13 @@
 //
-//  Library.swift
+//  Post.swift
 //  WBooks
 //
-//  Created by ana.mancuso on 20/09/2022.
+//  Created by ana.mancuso on 12/10/2022.
 //
+
 import UIKit
 
-struct Library: Decodable {
+struct Post: Decodable {
     
     //    MARK: Properties
         var id: Int
@@ -41,4 +42,3 @@ struct Library: Decodable {
         }
     
 }
-
