@@ -8,20 +8,20 @@ import UIKit
 
 class RentalsViewModel {
     
-    var postBook = [Post]()
-    private let postRepository: PostRepository
+    var posts = [Post]()
+    private let bookRepository: BookRepository
     var changeList: (() -> Void)?
     
-    init(postRepository: PostRepository = PostRepository()) {
-        self.postRepository = postRepository
+    init(bookRepository: BookRepository = BookRepository()) {
+        self.bookRepository = bookRepository
     }
     
     func loadPost() {
-        postRepository.fetchBooks { [weak self] post in
+        bookRepository.fetchPost { [weak self] comments in
             guard let selfAux = self else {
                 return
             }
-            selfAux.postBook = post
+            selfAux.posts = comments
             selfAux.changeList?()
         } onError: { errorLista in
             print(errorLista.localizedDescription)

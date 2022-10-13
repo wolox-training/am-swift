@@ -9,17 +9,18 @@ import UIKit
 class DetailsViewModel {
     
     let bookDetails: Library
+    var user = [Users]()
     var reviewer = [Reviewer]()
-    private let reviewRepository: ReviewRepository
+    private let bookRepository: BookRepository
     var changeList: (() -> Void)?
     
-    init(bookDetails: Library, reviewRepository: ReviewRepository = ReviewRepository()) {
+    init(bookDetails: Library, bookRepository: BookRepository = BookRepository()) {
         self.bookDetails = bookDetails
-        self.reviewRepository = reviewRepository
+        self.bookRepository = bookRepository
     }
     
     func loadSampleLibrarys() {
-        reviewRepository.fetchBooks { [weak self] comments in
+        bookRepository.fetchComments (id: bookDetails.id){ [weak self] comments in
             guard let selfAux = self else {
                 return
             }

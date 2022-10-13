@@ -16,16 +16,15 @@ class DetailsViewController: UIViewController {
         self.detailsViewModel = detailsViewModel
         super.init(nibName: nil, bundle: nil)
     }
+    
     required init? (coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailsV.tableView.delegate = self
-        detailsV.tableView.dataSource = self
-        detailsV.tableView.registerCell(cellType: ReviewTableViewCell.self)
-        detailsV.setupData(library: detailsViewModel.bookDetails)
+        configReviews()
+        title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
     }
     
     override func loadView() {
@@ -36,6 +35,17 @@ class DetailsViewController: UIViewController {
         let rentalsViewModel = RentalsViewModel()
         let rentalsViewController = RentalsController(viewModel: rentalsViewModel)
         navigationController?.pushViewController(rentalsViewController, animated: true)
+    }
+    func configReviews() {
+        detailsV.tableView.delegate = self
+        detailsV.tableView.dataSource = self
+        detailsV.tableView.registerCell(cellType: ReviewTableViewCell.self)
+        setupData(library: detailsViewModel.bookDetails)
+        detailsV.rentButton.addTarget(self, action:#selector(rentButton), for: .touchUpInside)
+        detailsV.addButton.addTarget(self, action:#selector(addButton), for: .touchUpInside)
+        detailsViewModel.loadSampleLibrarys()
+        detailsV.availabilityBook.textColor = (detailsV.availabilityBook.text == "Available") ? UIColor(red: 136/255, green: 176/255, blue: 50/255, alpha: 1) : UIColor(red: 211/255, green: 41/255, blue: 41/255, alpha: 1)
+        detailsV.rentButton.backgroundColor = (detailsV.availabilityBook.text == "Unavailable") ? .gray : UIColor(red: 30/255, green: 172/255, blue: 183/255, alpha: 1)
     }
 
 }
@@ -64,5 +74,43 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
             return true
         }
 
+    //MARK: Action
+    
+    @objc func addButton() {
+    }
+    @objc func rentButton() {
+        let availableToF = (detailsV.availabilityBook.text.self != nil) ? "Available" : "Unavailable"
+        let noti = UIAlertController(title: NSLocalizedString("ALERT_BOOKED_SUCCESSFULLY", comment: ""), message: NSLocalizedString("COMMENT_BOOKED_SUCCESFULLY", comment: "").capitalized, preferredStyle: .alert)
+        let alert = UIAlertController(title: "OH NO!", message: NSLocalizedString("COMMENT_BOOKED_NO_RENT", comment: "").capitalized, preferredStyle: .alert)
+        let error = UIAlertController(title: "ERROR", message: NSLocalizedString("COMMENT_BOOKED_ERROR", comment: "").capitalized, preferredStyle: .alert)
+        
+        if availableToF == "Available" {
+            noti.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(noti, animated: true, completion: nil)
+            goToRentals()
+        } else if availableToF == "Unavailable" {
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(error, animated: true, completion: nil)
+        }
+    }
+    
+    func setupData(library: Library?) {
+        detailsV.bookName.text = library?.name
+        detailsV.authorBook.text = library?.name2
+        detailsV.availabilityBook.text = library?.status
+        detailsV.yearBook.text = library?.year
+        detailsV.genreBook.text = library?.genre
+        self.detailsV.bookImage?.downloaded(from: library?.photo ?? "")
+    }
 }
 

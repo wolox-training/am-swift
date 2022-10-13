@@ -40,9 +40,9 @@ class ReviewTableViewCell: UITableViewCell {
     }
 
     func setupReviewData(reviewer: Reviewer?) {
-        nameReviewer.text = reviewer?.name
+        nameReviewer.text = reviewer?.info.name
         commentReviewer.text = reviewer?.comment
-        self.iconReviewer?.downloaded(from: reviewer?.photo ?? "")
+        self.iconReviewer?.downloaded(from: reviewer?.info.icon ?? "")
     }
     
 }

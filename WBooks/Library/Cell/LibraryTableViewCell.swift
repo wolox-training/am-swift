@@ -24,6 +24,7 @@ class LibraryTableViewCell: UITableViewCell {
         libraryView.layer.shadowOpacity = 0.2
         libraryView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
         libraryView.layer.masksToBounds = false
+        selectionStyle = .none
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

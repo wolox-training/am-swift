@@ -24,7 +24,7 @@ class LibraryTableViewC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_VIEW_LIBRARY", comment: "")
+        title = NSLocalizedString("TITLE_VIEW_LIBRARY", comment: "")
         configTableView()
         libraryTableViewModel.changeList = { [weak self] in
             self?.libraryViewC.tableView.reloadData()
@@ -74,7 +74,6 @@ extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
         let detailsViewModel = DetailsViewModel(bookDetails: libraryT)
         let detailsViewController = DetailsViewController(detailsViewModel: detailsViewModel)
         navigationController?.pushViewController(detailsViewController, animated: true)
-        navigationController?.navigationBar.topItem?.title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
     }
     
 }

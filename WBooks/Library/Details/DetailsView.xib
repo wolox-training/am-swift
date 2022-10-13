@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsView">
             <connections>
+                <outlet property="addButton" destination="Ua2-IT-2QR" id="aUw-r7-mIU"/>
                 <outlet property="authorBook" destination="k91-jI-mpn" id="gEc-UF-n2V"/>
                 <outlet property="availabilityBook" destination="AAH-Bc-XaR" id="fgl-wO-Aid"/>
                 <outlet property="bookImage" destination="bo3-a7-PoL" id="uS2-aD-SMV"/>
@@ -18,7 +19,7 @@
                 <outlet property="bookView" destination="Dn6-3n-8M5" id="DsV-Th-OcC"/>
                 <outlet property="detailsBackground" destination="iN0-l3-epB" id="ZIn-Gn-bVT"/>
                 <outlet property="genreBook" destination="TEX-Vd-SzH" id="Tg4-tj-HAe"/>
-                <outlet property="rentButtonFormat" destination="aPk-5r-DqO" id="8eq-2e-fKZ"/>
+                <outlet property="rentButton" destination="aPk-5r-DqO" id="Mxn-h4-WJ0"/>
                 <outlet property="tableView" destination="dIf-YM-qOV" id="zjk-hl-7xo"/>
                 <outlet property="yearBook" destination="bVx-fn-WXG" id="vie-Ut-LXF"/>
             </connections>
@@ -59,9 +60,6 @@
                                     </fragment>
                                 </attributedString>
                             </buttonConfiguration>
-                            <connections>
-                                <action selector="addButton:" destination="-1" eventType="touchUpInside" id="Rjy-QG-L5q"/>
-                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXo-f8-7NL">
                             <rect key="frame" x="103" y="15" width="195" height="24"/>
@@ -123,9 +121,6 @@
                                 <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
-                            <connections>
-                                <action selector="rentButton:" destination="-1" eventType="touchUpInside" id="dTO-VR-mWb"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

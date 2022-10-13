@@ -4,8 +4,6 @@
 //
 //  Created by ana.mancuso on 20/09/2022.
 //
-import UIKit
-
 struct Library: Decodable {
     
     //    MARK: Properties

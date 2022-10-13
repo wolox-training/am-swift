@@ -34,4 +34,5 @@ class RentalsController: UIViewController {
         view = rentalsView
     }
     
+    
 }
