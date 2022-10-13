@@ -41,6 +41,7 @@ class DetailsViewController: UIViewController {
         detailsV.tableView.dataSource = self
         detailsV.tableView.registerCell(cellType: ReviewTableViewCell.self)
         setupData(library: detailsViewModel.bookDetails)
+        detailsViewModel.loadSampleLibrarys()
         detailsV.rentButton.addTarget(self, action:#selector(rentButton), for: .touchUpInside)
         detailsV.addButton.addTarget(self, action:#selector(addButton), for: .touchUpInside)
         detailsViewModel.loadSampleLibrarys()
@@ -48,41 +49,23 @@ class DetailsViewController: UIViewController {
         detailsV.rentButton.backgroundColor = (detailsV.availabilityBook.text == "Unavailable") ? .gray : UIColor(red: 30/255, green: 172/255, blue: 183/255, alpha: 1)
     }
 
-}
-extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
-
-    // MARK: - Table view data source
-
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return detailsViewModel.reviewer.count
-        }
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cellIdentifier = "ReviewTableViewCell"
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReviewTableViewCell  else {
-                fatalError("The dequeued cell is not an instance of LibraryTableViewCell.")
-            }
-            cell.setupReviewData(reviewer: detailsViewModel.reviewer[indexPath.row])
-            return cell
-        }
-
-        func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-            return true
-        }
-
     //MARK: Action
     
     @objc func addButton() {
     }
     @objc func rentButton() {
+        alertConfiguration()
+    }
+    
+    func alertConfiguration () {
         let availableToF = (detailsV.availabilityBook.text.self != nil) ? "Available" : "Unavailable"
-        let noti = UIAlertController(title: NSLocalizedString("ALERT_BOOKED_SUCCESSFULLY", comment: ""), message: NSLocalizedString("COMMENT_BOOKED_SUCCESFULLY", comment: "").capitalized, preferredStyle: .alert)
-        let alert = UIAlertController(title: "OH NO!", message: NSLocalizedString("COMMENT_BOOKED_NO_RENT", comment: "").capitalized, preferredStyle: .alert)
-        let error = UIAlertController(title: "ERROR", message: NSLocalizedString("COMMENT_BOOKED_ERROR", comment: "").capitalized, preferredStyle: .alert)
+        let title = NSLocalizedString("ALERT_BOOKED_SUCCESSFULLY", comment: "")
+        let succesTitle = NSLocalizedString("COMMENT_BOOKED_SUCCESFULLY", comment: "")
+        let errorTitle = NSLocalizedString("COMMENT_BOOKED_ERROR", comment: "")
+        let noRentTitle = NSLocalizedString("COMMENT_BOOKED_NO_RENT", comment: "")
+        let noti = UIAlertController(title: title, message: succesTitle.capitalized, preferredStyle: .alert)
+        let alert = UIAlertController(title: "OH NO!", message: noRentTitle.capitalized, preferredStyle: .alert)
+        let error = UIAlertController(title: "ERROR", message: errorTitle.capitalized, preferredStyle: .alert)
         
         if availableToF == "Available" {
             noti.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
@@ -103,7 +86,6 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(error, animated: true, completion: nil)
         }
     }
-    
     func setupData(library: Library?) {
         detailsV.bookName.text = library?.name
         detailsV.authorBook.text = library?.name2
@@ -112,5 +94,32 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
         detailsV.genreBook.text = library?.genre
         self.detailsV.bookImage?.downloaded(from: library?.photo ?? "")
     }
+    
+}
+extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    // MARK: - Table view data source
+
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return detailsViewModel.reviewer.count
+        }
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cellIdentifier = "ReviewTableViewCell"
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReviewTableViewCell  else {
+                fatalError("The dequeued cell is not an instance of ReviewTableViewCell.")
+            }
+            cell.setupReviewData(reviewer: detailsViewModel.reviewer[indexPath.row])
+            return cell
+        }
+
+        func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+            return true
+        }
+
 }
 

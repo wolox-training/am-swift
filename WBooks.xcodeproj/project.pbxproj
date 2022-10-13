@@ -250,6 +250,7 @@
 			children = (
 				D37F17FB28F70AAF0056A259 /* ReviewTableViewCell.xib */,
 				D37F17FD28F70AC80056A259 /* ReviewTableViewCell.swift */,
+				D37F17FF28F70DDC0056A259 /* Reviewer.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -261,7 +262,6 @@
 				D386341C28E74F6B0063F5FC /* DetailsView.swift */,
 				D386342028E74FA80063F5FC /* DetailsViewController.swift */,
 				D329F7D928F5E05300D9C672 /* DetailsViewModel.swift */,
-				D37F17FF28F70DDC0056A259 /* Reviewer.swift */,
 				D3077C0128F870A100D654D3 /* Users.swift */,
 				D37F17FA28F70A6C0056A259 /* Reviews */,
 			);

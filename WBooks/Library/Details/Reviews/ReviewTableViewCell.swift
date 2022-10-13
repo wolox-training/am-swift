@@ -10,7 +10,17 @@ import UIKit
 class ReviewTableViewCell: UITableViewCell {
 
     //    MARK: Properties
-    @IBOutlet var reviewView: UIView!
+    @IBOutlet var reviewView: UIView! {
+        didSet {
+            reviewView.layer.cornerRadius = 10
+            reviewView.layer.shadowColor = UIColor.darkGray.cgColor
+            reviewView.layer.shadowRadius = 3
+            reviewView.layer.shadowOpacity = 0.2
+            reviewView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
+            reviewView.layer.masksToBounds = false
+            reviewView.backgroundColor = .white
+        }
+    }
     @IBOutlet var nameReviewer: UILabel!
     @IBOutlet var commentReviewer: UILabel! {
         didSet {
@@ -27,12 +37,7 @@ class ReviewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
-        reviewView.layer.cornerRadius = 10
-        reviewView.layer.shadowColor = UIColor.darkGray.cgColor
-        reviewView.layer.shadowRadius = 3
-        reviewView.layer.shadowOpacity = 0.2
-        reviewView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
-        reviewView.layer.masksToBounds = false
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

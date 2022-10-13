@@ -20,7 +20,7 @@ struct Reviewer: Decodable {
         }
 
         enum BookKey: String, CodingKey {
-            case id = "id"
+            case id 
             case info = "user"
             case comment = "content"
         }

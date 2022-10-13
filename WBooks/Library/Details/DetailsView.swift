@@ -51,7 +51,11 @@ final class DetailsView: NibView {
             }
     }
     @IBOutlet var addButton: UIButton!
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableView: UITableView! {
+        didSet {
+            tableView.backgroundColor = .clear
+        }
+    }
     
 }
 

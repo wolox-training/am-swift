@@ -29,13 +29,13 @@ struct Library: Decodable {
         }
 
         enum BookKey: String, CodingKey {
-            case id = "id"
-            case title = "title"
-            case author = "author"
-            case genre = "genre"
-            case year = "year"
-            case status = "status"
-            case image = "image"
+            case id
+            case title
+            case author
+            case genre
+            case year
+            case status
+            case image
         }
     
 }

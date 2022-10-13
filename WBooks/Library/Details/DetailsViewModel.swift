@@ -9,7 +9,6 @@ import UIKit
 class DetailsViewModel {
     
     let bookDetails: Library
-    var user = [Users]()
     var reviewer = [Reviewer]()
     private let bookRepository: BookRepository
     var changeList: (() -> Void)?

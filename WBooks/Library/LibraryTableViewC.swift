@@ -23,7 +23,6 @@ class LibraryTableViewC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = NSLocalizedString("TITLE_VIEW_LIBRARY", comment: "")
         configTableView()
         libraryTableViewModel.changeList = { [weak self] in
