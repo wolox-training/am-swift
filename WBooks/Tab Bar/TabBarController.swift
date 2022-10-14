@@ -13,12 +13,12 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         let libraryController = LibraryTableViewC(viewModel: LibraryTableViewModel())
-        let navigationLibrary = createItem(controller: libraryController, title: "TITLE_VIEW_LIBRARY", image: UIImage(named: "home.png")!, tag: 0)
+        let navigationLibrary = createItem(controller: libraryController, title: "TITLE_VIEW_LIBRARY".capitalized, image: UIImage(named: "home.png")!, tag: 0)
         let wishListController = WishListController()
         let navigationWishList = createItem(controller: wishListController, title: "TITLE_VIEW_WISHLIST", image: UIImage(named: "wishlist.png")!, tag: 1)
         let addNewController = AddNewController()
         let navigationAddNew = createItem(controller: addNewController, title: "TITLE_VIEW_ADDNEW", image: UIImage(named: "addnew.png")!, tag: 3)
-        let rentalsController = RentalsController(viewModel: RentalsViewModel())
+        let rentalsController = RentalsController()
         let navigationRentals = createItem(controller: rentalsController, title: "TITLE_VIEW_RENTALS", image: UIImage(named: "rentals.png")!, tag: 4)
         viewControllers = [navigationLibrary, navigationWishList, navigationAddNew, navigationRentals]
        

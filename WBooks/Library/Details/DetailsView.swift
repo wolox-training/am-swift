@@ -51,9 +51,21 @@ final class DetailsView: NibView {
             }
     }
     @IBOutlet var addButton: UIButton!
+    @IBOutlet var viewContentTableView: UIView! {
+        didSet {
+            viewContentTableView.layer.cornerRadius = 10
+            viewContentTableView.backgroundColor = .white
+            viewContentTableView.layer.shadowColor = UIColor.darkGray.cgColor
+            viewContentTableView.layer.shadowRadius = 3
+            viewContentTableView.layer.shadowOpacity = 0.2
+            viewContentTableView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
+            viewContentTableView.layer.masksToBounds = false
+        }
+    }
     @IBOutlet var tableView: UITableView! {
         didSet {
-            tableView.backgroundColor = .clear
+            tableView.separatorColor = UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1)
+            tableView.layer.cornerRadius = 10
         }
     }
     

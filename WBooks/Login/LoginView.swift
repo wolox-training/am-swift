@@ -13,9 +13,10 @@ final class LoginView: NibView {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet var singinButton: UIButton! {
+    @IBOutlet var signinButton: UIButton! {
         didSet {
-            singinButton.setTitle(NSLocalizedString("SIGN_IN_BUTTON", comment: ""), for: .normal)
+            signinButton.setTitle(NSLocalizedString("SIGN_IN_BUTTON", comment: ""), for: .normal)
+            
         }
     }
     

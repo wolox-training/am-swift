@@ -9,8 +9,7 @@ import UIKit
 
 class RentalsController: UIViewController {
 
-    private lazy var rentalsView = RentalsView()
-    private let rentalsViewModel: RentalsViewModel
+/*    private lazy var rentalsView = RentalsView()
     
     init(viewModel: RentalsViewModel) {
         self.rentalsViewModel = viewModel
@@ -34,5 +33,5 @@ class RentalsController: UIViewController {
         view = rentalsView
     }
     
-    
+ */
 }

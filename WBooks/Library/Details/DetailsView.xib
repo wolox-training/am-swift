@@ -21,6 +21,7 @@
                 <outlet property="genreBook" destination="TEX-Vd-SzH" id="Tg4-tj-HAe"/>
                 <outlet property="rentButton" destination="aPk-5r-DqO" id="Mxn-h4-WJ0"/>
                 <outlet property="tableView" destination="dIf-YM-qOV" id="zjk-hl-7xo"/>
+                <outlet property="viewContentTableView" destination="RS5-x0-o1d" id="k0e-39-0Z6"/>
                 <outlet property="yearBook" destination="bVx-fn-WXG" id="vie-Ut-LXF"/>
             </connections>
         </placeholder>
@@ -154,23 +155,35 @@
                         <constraint firstItem="AAH-Bc-XaR" firstAttribute="leading" secondItem="bo3-a7-PoL" secondAttribute="trailing" constant="12" id="zW9-kB-0PP"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIf-YM-qOV">
-                    <rect key="frame" x="24" y="305" width="327" height="222"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RS5-x0-o1d">
+                    <rect key="frame" x="24" y="305" width="327" height="296"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIf-YM-qOV">
+                            <rect key="frame" x="0.0" y="0.0" width="327" height="296"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="327" id="qnt-40-Qsz"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="222" id="9Xk-28-1n5"/>
-                        <constraint firstAttribute="width" constant="327" id="qnt-40-Qsz"/>
+                        <constraint firstAttribute="bottom" secondItem="dIf-YM-qOV" secondAttribute="bottom" id="8DB-Z6-8YS"/>
+                        <constraint firstItem="dIf-YM-qOV" firstAttribute="leading" secondItem="RS5-x0-o1d" secondAttribute="leading" id="P6t-1y-rgq"/>
+                        <constraint firstAttribute="trailing" secondItem="dIf-YM-qOV" secondAttribute="trailing" id="RDz-wq-zKr"/>
+                        <constraint firstAttribute="width" constant="327" id="RKj-0E-g9o"/>
+                        <constraint firstItem="dIf-YM-qOV" firstAttribute="top" secondItem="RS5-x0-o1d" secondAttribute="top" id="y7e-yf-2Fa"/>
                     </constraints>
-                </tableView>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="dIf-YM-qOV" firstAttribute="top" secondItem="Dn6-3n-8M5" secondAttribute="bottom" constant="20" id="Cs8-df-Lz0"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dIf-YM-qOV" secondAttribute="trailing" constant="24" id="Dma-19-wqU"/>
-                <constraint firstItem="dIf-YM-qOV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="GiC-bH-ZNk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RS5-x0-o1d" secondAttribute="trailing" constant="24" id="2Pa-6v-3mJ"/>
                 <constraint firstItem="Dn6-3n-8M5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="Hjx-c7-sba"/>
+                <constraint firstItem="RS5-x0-o1d" firstAttribute="top" secondItem="Dn6-3n-8M5" secondAttribute="bottom" constant="20" id="IN2-yN-6Br"/>
                 <constraint firstItem="Dn6-3n-8M5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="IXo-8r-AfT"/>
+                <constraint firstItem="RS5-x0-o1d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="doq-ir-S6w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RS5-x0-o1d" secondAttribute="bottom" constant="66" id="xKL-KD-xr4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dn6-3n-8M5" secondAttribute="trailing" constant="24" id="yDF-i1-CzB"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="20.239880059970016"/>

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginView.singinButton.addTarget(self, action:#selector(singinButtonAction), for: .touchUpInside)
+        loginView.signinButton.addTarget(self, action:#selector(signinButtonAction), for: .touchUpInside)
     }
     
     override func loadView() {
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
 
     //MARK: Action
     
-    @objc func singinButtonAction() {
+    @objc func signinButtonAction() {
         let tabBar = TabBarController()
         UIApplication.shared.windows.first?.rootViewController = tabBar
         UIApplication.shared.windows.first?.makeKeyAndVisible()

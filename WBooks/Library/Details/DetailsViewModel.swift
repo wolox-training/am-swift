@@ -27,8 +27,21 @@ class DetailsViewModel {
             selfAux.changeList?()
         } onError: { errorLista in
             print(errorLista.localizedDescription)
+            
         }
      }
+    
+    func rentLibrary () {
+        bookRepository.fetchPost(id: bookDetails.id){ [weak self] rent in
+            guard let selfAux = self else {
+                return
+            }
+            debugPrint(rent)
+        } onError: { errorLista in
+            print(errorLista.localizedDescription)
+            
+        }
+    }
     
 }
 

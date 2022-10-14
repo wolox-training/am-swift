@@ -25,28 +25,26 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         configReviews()
         title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
+        
     }
     
     override func loadView() {
         view = detailsV
     }
 
-    func goToRentals() {
-        let rentalsViewModel = RentalsViewModel()
-        let rentalsViewController = RentalsController(viewModel: rentalsViewModel)
-        navigationController?.pushViewController(rentalsViewController, animated: true)
-    }
     func configReviews() {
         detailsV.tableView.delegate = self
         detailsV.tableView.dataSource = self
         detailsV.tableView.registerCell(cellType: ReviewTableViewCell.self)
         setupData(library: detailsViewModel.bookDetails)
+        detailsViewModel.changeList = { [weak self] in
+            self?.detailsV.tableView.reloadData()
+        }
         detailsViewModel.loadSampleLibrarys()
         detailsV.rentButton.addTarget(self, action:#selector(rentButton), for: .touchUpInside)
-        detailsV.addButton.addTarget(self, action:#selector(addButton), for: .touchUpInside)
-        detailsViewModel.loadSampleLibrarys()
-        detailsV.availabilityBook.textColor = (detailsV.availabilityBook.text == "Available") ? UIColor(red: 136/255, green: 176/255, blue: 50/255, alpha: 1) : UIColor(red: 211/255, green: 41/255, blue: 41/255, alpha: 1)
         detailsV.rentButton.backgroundColor = (detailsV.availabilityBook.text == "Unavailable") ? .gray : UIColor(red: 30/255, green: 172/255, blue: 183/255, alpha: 1)
+        detailsV.addButton.addTarget(self, action:#selector(addButton), for: .touchUpInside)
+        detailsV.availabilityBook.textColor = (detailsV.availabilityBook.text == "Available") ? UIColor(red: 136/255, green: 176/255, blue: 50/255, alpha: 1) : UIColor(red: 211/255, green: 41/255, blue: 41/255, alpha: 1)
     }
 
     //MARK: Action
@@ -55,6 +53,7 @@ class DetailsViewController: UIViewController {
     }
     @objc func rentButton() {
         alertConfiguration()
+        detailsViewModel.rentLibrary()
     }
     
     func alertConfiguration () {
@@ -72,7 +71,6 @@ class DetailsViewController: UIViewController {
             NSLog("The \"OK\" alert occured.")
             }))
             self.present(noti, animated: true, completion: nil)
-            goToRentals()
         } else if availableToF == "Unavailable" {
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
@@ -114,6 +112,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource {
                 fatalError("The dequeued cell is not an instance of ReviewTableViewCell.")
             }
             cell.setupReviewData(reviewer: detailsViewModel.reviewer[indexPath.row])
+            print("SetUpHecho")
             return cell
         }
 
