@@ -42,6 +42,12 @@ final class DetailsView: NibView {
     }
     @IBOutlet var genreBook: UILabel! {
         didSet {
+            genreBook.backgroundColor
+            CAGradientLayer.colors = [UIColor(red: 30/255, green: 172/255, blue: 183/255, alpha: 1).cgColor,
+                                    UIColor(red: 56/255, green: 170/255, blue: 235/255, alpha: 1).cgColor,
+                                    UIColor(red: 56/255, green: 204/255, blue: 206/255, alpha: 1).cgColor]
+                 
+            CAGradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi / 1, 0, 0, 1)
             genreBook.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
         }
     }

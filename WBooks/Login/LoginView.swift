@@ -16,7 +16,6 @@ final class LoginView: NibView {
     @IBOutlet var signinButton: UIButton! {
         didSet {
             signinButton.setTitle(NSLocalizedString("SIGN_IN_BUTTON", comment: ""), for: .normal)
-            
         }
     }
     

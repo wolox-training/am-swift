@@ -26,7 +26,7 @@ class BookRepository {
                 onError(error)
             }
         }
-        }
+    }
     
     func fetchComments(id: Int, onSuccess: @escaping ([Reviewer]) -> Void, onError: @escaping (Error) -> Void) {
         let url = URL(string: "https://private-anon-36d238496c-wbooksiostraining.apiary-mock.com/books/\(id)/comments")!
@@ -46,7 +46,7 @@ class BookRepository {
                 onError(error)
             }
         }
-        }
+    }
     
     func fetchPost(id: Int, onSuccess: @escaping (Post) -> Void, onError: @escaping (Error) -> Void) {
         let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/rents")!
