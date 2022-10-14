@@ -4,6 +4,7 @@
 //
 //  Created by ana.mancuso on 28/09/2022.
 //
+
 import UIKit
 
 class LibraryTableViewModel {
@@ -24,9 +25,8 @@ class LibraryTableViewModel {
             selfAux.library = listaDeLibros
             selfAux.changeList?()
         } onError: { errorLista in
-            print(errorLista.localizedDescription)
+            debugPrint(errorLista.localizedDescription)
         }
-     }
-    
+    }
     
 }

@@ -4,9 +4,11 @@
 //
 //  Created by ana.mancuso on 20/09/2022.
 //
+
 struct Library: Decodable {
     
     //    MARK: Properties
+    
         var id: Int
         var name: String
         var name2: String
@@ -39,4 +41,3 @@ struct Library: Decodable {
         }
     
 }
-

@@ -8,8 +8,9 @@
 import UIKit
 
 class LibraryTableViewCell: UITableViewCell {
-
-//    MARK: Properties
+    
+    //    MARK: Properties
+    
     @IBOutlet weak var libraryView: UIView! {
         didSet {
             libraryView.layer.cornerRadius = 10
@@ -33,7 +34,7 @@ class LibraryTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
     func setupData(library: Library?) {
         nameBookLabel.text = library?.name
         autorBookName.text = library?.name2
@@ -41,4 +42,3 @@ class LibraryTableViewCell: UITableViewCell {
     }
     
 }
-

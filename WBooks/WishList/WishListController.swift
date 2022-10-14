@@ -8,7 +8,7 @@
 import UIKit
 
 class WishListController: UIViewController {
-
+    
     private lazy var wishlistView = WishListView()
     
     override func viewDidLoad() {
@@ -19,5 +19,5 @@ class WishListController: UIViewController {
     override func loadView() {
         view = wishlistView
     }
-
+    
 }

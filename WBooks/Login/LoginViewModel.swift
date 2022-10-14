@@ -8,7 +8,7 @@
 class LoginViewModel {
     
     func pulsacion() {
-        print ("Boton pulsado")
+        debugPrint ("Boton pulsado")
     }
     
     func createViewModelLibrary() -> LibraryTableViewModel {

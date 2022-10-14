@@ -10,6 +10,7 @@ import UIKit
 final class DetailsView: NibView {
     
     //MARK: Properties
+    
     @IBOutlet var detailsBackground: UIView! {
         didSet {
             detailsBackground.backgroundColor = UIColor(red: 236/255, green: 248/255, blue: 255/255, alpha: 1)
@@ -28,7 +29,7 @@ final class DetailsView: NibView {
     }
     @IBOutlet var bookImage: UIImageView!
     @IBOutlet var bookName: UILabel!
-    @IBOutlet var availabilityBook: UILabel! 
+    @IBOutlet var availabilityBook: UILabel!
     @IBOutlet var authorBook: UILabel! {
         didSet {
             authorBook.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
@@ -45,10 +46,10 @@ final class DetailsView: NibView {
         }
     }
     @IBOutlet var rentButton: UIButton! {
-            didSet {
-                rentButton.setTitleColor(.white, for: UIControl.State())
-                rentButton.layer.cornerRadius = 23
-            }
+        didSet {
+            rentButton.setTitleColor(.white, for: UIControl.State())
+            rentButton.layer.cornerRadius = 23
+        }
     }
     @IBOutlet var addButton: UIButton!
     @IBOutlet var viewContentTableView: UIView! {

@@ -8,12 +8,12 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let libraryController = LibraryTableViewC(viewModel: LibraryTableViewModel())
-        let navigationLibrary = createItem(controller: libraryController, title: "TITLE_VIEW_LIBRARY".capitalized, image: UIImage(named: "home.png")!, tag: 0)
+        let navigationLibrary = createItem(controller: libraryController, title: "TITLE_VIEW_LIBRARY", image: UIImage(named: "home.png")!, tag: 0)
         let wishListController = WishListController()
         let navigationWishList = createItem(controller: wishListController, title: "TITLE_VIEW_WISHLIST", image: UIImage(named: "wishlist.png")!, tag: 1)
         let addNewController = AddNewController()
@@ -33,5 +33,5 @@ class TabBarController: UITabBarController {
         navigation.viewControllers = [controller]
         return navigation
     }
-
+    
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class LibraryTableViewC: UIViewController {
-        
+    
     private lazy var libraryViewC = LibraryTableView()
     private let libraryTableViewModel: LibraryTableViewModel
     
@@ -20,7 +20,7 @@ class LibraryTableViewC: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("TITLE_VIEW_LIBRARY", comment: "")
@@ -33,41 +33,41 @@ class LibraryTableViewC: UIViewController {
     override func loadView() {
         view = libraryViewC
     }
-         
+    
     func configTableView() {
         libraryViewC.tableView.delegate = self
         libraryViewC.tableView.dataSource = self
         libraryViewC.tableView.registerCell(cellType: LibraryTableViewCell.self)
         libraryTableViewModel.loadSampleLibrarys()
     }
-        
+    
 }
 extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Table view data source
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return libraryTableViewModel.library.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "LibraryTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LibraryTableViewCell  else {
             fatalError("The dequeued cell is not an instance of LibraryTableViewCell.")
         }
         cell.setupData(library: libraryTableViewModel.library[indexPath.row])
-
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let libraryT = libraryTableViewModel.library[indexPath.row]
         let detailsViewModel = DetailsViewModel(bookDetails: libraryT)
@@ -76,4 +76,3 @@ extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-

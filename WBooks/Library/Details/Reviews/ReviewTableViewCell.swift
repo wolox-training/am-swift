@@ -10,6 +10,7 @@ import UIKit
 class ReviewTableViewCell: UITableViewCell {
 
     //    MARK: Properties
+    
     @IBOutlet var reviewView: UIView! {
         didSet {
             reviewView.backgroundColor = .clear
@@ -32,11 +33,11 @@ class ReviewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
     func setupReviewData(reviewer: Reviewer?) {
         nameReviewer.text = reviewer?.info.name.capitalized
         commentReviewer.text = reviewer?.comment

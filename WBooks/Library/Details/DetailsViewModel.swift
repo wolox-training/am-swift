@@ -4,9 +4,12 @@
 //
 //  Created by ana.mancuso on 11/10/2022.
 //
+
 import UIKit
 
 class DetailsViewModel {
+    
+    //MARK: Properties
     
     let bookDetails: Library
     var reviewer = [Reviewer]()
@@ -26,10 +29,9 @@ class DetailsViewModel {
             selfAux.reviewer = comments
             selfAux.changeList?()
         } onError: { errorLista in
-            print(errorLista.localizedDescription)
-            
+            debugPrint(errorLista.localizedDescription)
         }
-     }
+    }
     
     func rentLibrary () {
         bookRepository.fetchPost(id: bookDetails.id){ [weak self] rent in
@@ -38,8 +40,7 @@ class DetailsViewModel {
             }
             debugPrint(rent)
         } onError: { errorLista in
-            print(errorLista.localizedDescription)
-            
+            debugPrint(errorLista.localizedDescription)
         }
     }
     
