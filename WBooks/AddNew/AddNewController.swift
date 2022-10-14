@@ -8,7 +8,7 @@
 import UIKit
 
 class AddNewController: UIViewController {
-
+    
     private lazy var addnewView = AddNewView()
     
     override func viewDidLoad() {

@@ -12,7 +12,7 @@
                 <outlet property="backgroundImage" destination="0Cf-6h-v1q" id="af5-pV-aTT"/>
                 <outlet property="iconImage" destination="3hX-oM-ebC" id="QSQ-d4-ds4"/>
                 <outlet property="passwordTextField" destination="BnA-df-iyC" id="phu-Wr-1NC"/>
-                <outlet property="singinButton" destination="6la-wz-0gZ" id="Hsm-gb-Fgt"/>
+                <outlet property="signinButton" destination="6la-wz-0gZ" id="Yak-Bx-ilb"/>
                 <outlet property="usernameTextField" destination="Mry-hR-UWo" id="leu-j0-4Pa"/>
             </connections>
         </placeholder>

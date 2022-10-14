@@ -9,14 +9,4 @@ import UIKit
 
 class RentalsController: UIViewController {
 
-    private lazy var rentalsView = RentalsView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func loadView() {
-        view = rentalsView
-    }
-    
 }
