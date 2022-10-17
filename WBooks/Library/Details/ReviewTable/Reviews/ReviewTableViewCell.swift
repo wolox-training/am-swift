@@ -43,5 +43,11 @@ class ReviewTableViewCell: UITableViewCell {
         commentReviewer.text = reviewer?.comment
         self.iconReviewer?.downloaded(from: reviewer?.info.icon ?? "")
     }
+    @IBOutlet var singleLineView: UIView! {
+        didSet {
+            singleLineView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
+            singleLineView.backgroundColor = UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1)
+        }
+    }
     
 }
