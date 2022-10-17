@@ -13,7 +13,7 @@ final class DetailsView: NibView {
     
     @IBOutlet var detailsBackground: UIView! {
         didSet {
-            detailsBackground.backgroundColor = UIColor(red: 236/255, green: 248/255, blue: 255/255, alpha: 1)
+            detailsBackground.backgroundColor = .aliceBlue
         }
     }
     @IBOutlet var headerView: UIView!

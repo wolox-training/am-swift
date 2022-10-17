@@ -12,7 +12,7 @@ final class RentalsView: NibView {
     @IBOutlet var rentalsView: UIView!
     @IBOutlet var rentalsTableView: UITableView! {
         didSet {
-            rentalsTableView.backgroundColor = UIColor(red: 236/255, green: 248/255, blue: 255/255, alpha: 1)
+            rentalsTableView.backgroundColor = .aliceBlue
         }
     }
 
