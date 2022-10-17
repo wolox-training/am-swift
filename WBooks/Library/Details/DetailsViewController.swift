@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
     //MARK: Properties
     
     private lazy var detailsV = DetailsView()

@@ -8,7 +8,7 @@
 import UIKit
 
 class BookInfoViewController: UIViewController {
-
+    
     //MARK: Properties
     
     private lazy var bookView = BookInfoView()
@@ -41,7 +41,7 @@ class BookInfoViewController: UIViewController {
         bookView.addButton.addTarget(self, action:#selector(addButton), for: .touchUpInside)
         bookView.availabilityBook.textColor = (bookView.availabilityBook.text == "Available") ? .sushi : .persianRed
     }
-
+    
     //MARK: Action
     
     @objc func addButton() {
@@ -51,7 +51,7 @@ class BookInfoViewController: UIViewController {
         alertConfiguration()
         bookModel.rentLibrary()
     }
-
+    
     func alertConfiguration () {
         let availableToF = (bookView.availabilityBook.text.self != nil) ? "Available" : "Unavailable"
         let title = NSLocalizedString("ALERT_BOOKED_SUCCESSFULLY", comment: "")
