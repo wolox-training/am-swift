@@ -16,7 +16,7 @@ extension UIButton {
         gradientLayer.colors = colors
         gradientLayer.startPoint = CGPoint(x: 0.25, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 0.75, y: 0.5)
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: 295, height: 46)
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: 277, height: 46)
         gradientLayer.cornerRadius = 23
         gradientLayer.masksToBounds = false
         gradientLayer.locations = [0.0001, 0.002, 1.4]
