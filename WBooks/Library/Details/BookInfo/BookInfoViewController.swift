@@ -37,9 +37,9 @@ class BookInfoViewController: UIViewController {
     func configBook() {
         setupData(library: bookModel.bookDetails)
         bookView.rentButton.addTarget(self, action:#selector(rentButton), for: .touchUpInside)
-        bookView.rentButton.applyGradient(colors: ((bookView.availabilityBook.text == "Available") ? [UIButton.UIColorFromRGB(0x1EACB7).cgColor, UIButton.UIColorFromRGB(0x38AAEB).cgColor,  UIButton.UIColorFromRGB(0x38CCCE).cgColor] : [UIButton.UIColorFromRGB(0xE3E3E3).cgColor]))
+        bookView.rentButton.applyGradient(colors: ((bookView.availabilityBook.text == "Available") ? [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor] : [UIColor.gainsboro.cgColor]))
         bookView.addButton.addTarget(self, action:#selector(addButton), for: .touchUpInside)
-        bookView.availabilityBook.textColor = (bookView.availabilityBook.text == "Available") ? UIColor(red: 136/255, green: 176/255, blue: 50/255, alpha: 1) : UIColor(red: 211/255, green: 41/255, blue: 41/255, alpha: 1)
+        bookView.availabilityBook.textColor = (bookView.availabilityBook.text == "Available") ? .sushi : .persianRed
     }
 
     //MARK: Action

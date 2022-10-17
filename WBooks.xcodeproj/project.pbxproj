@@ -65,6 +65,7 @@
 		D3995EF428FDC31D004ABB5C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3995EF328FDC31D004ABB5C /* UIViewControllerExtension.swift */; };
 		D3995EF628FDC586004ABB5C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3995EF528FDC586004ABB5C /* UIViewExtension.swift */; };
 		D3995EF828FDC71E004ABB5C /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3995EF728FDC71E004ABB5C /* DetailsViewModel.swift */; };
+		D3995EFA28FDD419004ABB5C /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3995EF928FDD419004ABB5C /* ImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		D3995EF328FDC31D004ABB5C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		D3995EF528FDC586004ABB5C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D3995EF728FDC71E004ABB5C /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		D3995EF928FDD419004ABB5C /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		FC2B3468835700C8B1A2D23C /* Pods-WBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release.xcconfig"; path = "../Desktop/WBooks/Pods/Target Support Files/Pods-WBooks/Pods-WBooks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +268,7 @@
 				D3995EF128FDC2BA004ABB5C /* UIColorExtension.swift */,
 				D3995EF328FDC31D004ABB5C /* UIViewControllerExtension.swift */,
 				D3995EF528FDC586004ABB5C /* UIViewExtension.swift */,
+				D3995EF928FDD419004ABB5C /* ImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				D398C68528E37B480025DE95 /* LibraryTableView.swift in Sources */,
 				D3995EE328FD956F004ABB5C /* BookInfoView.swift in Sources */,
 				D3077C0228F870A100D654D3 /* Users.swift in Sources */,
+				D3995EFA28FDD419004ABB5C /* ImageExtension.swift in Sources */,
 				D32F778A28E4D579003130A8 /* RentalsView.swift in Sources */,
 				D398C67828E376B80025DE95 /* LoginView.swift in Sources */,
 				D386341A28E74ED10063F5FC /* LibraryTableViewModel.swift in Sources */,

@@ -31,17 +31,17 @@ final class BookInfoView: NibView {
     @IBOutlet var availabilityBook: UILabel!
     @IBOutlet var authorBook: UILabel! {
         didSet {
-            authorBook.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
+            authorBook.textColor = .gray
         }
     }
     @IBOutlet var yearBook: UILabel! {
         didSet {
-            yearBook.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
+            yearBook.textColor = .gray
         }
     }
     @IBOutlet var genreBook: UILabel! {
         didSet {
-            genreBook.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
+            genreBook.textColor = .gray
         }
     }
     @IBOutlet var rentButton: UIButton! {
@@ -52,9 +52,9 @@ final class BookInfoView: NibView {
     @IBOutlet var addButton: UIButton! {
         didSet {
             addButton.layer.borderWidth = 2
-            addButton.layer.borderColor = UIColor(red: 56/255, green: 170/255, blue: 235/255, alpha: 1).cgColor
+            addButton.layer.borderColor = UIColor.summerSky.cgColor
             addButton.layer.cornerRadius = 23
-            addButton.setTitleColor(UIColor(red: 0.219, green: 0.668, blue: 0.921, alpha: 1), for: UIControl.State())
+            addButton.setTitleColor(.summerSky, for: UIControl.State())
         }
     }
     

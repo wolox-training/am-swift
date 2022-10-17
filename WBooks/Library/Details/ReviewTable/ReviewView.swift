@@ -20,7 +20,6 @@ final class ReviewView: NibView {
     }
     @IBOutlet var tableView: UITableView! {
         didSet {
-            tableView.separatorColor = UIColor(red: 218/255, green: 218/255, blue: 218/255, alpha: 1)
             tableView.layer.cornerRadius = 10
         }
     }
