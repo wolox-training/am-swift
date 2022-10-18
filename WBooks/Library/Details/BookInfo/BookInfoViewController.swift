@@ -12,12 +12,12 @@ class BookInfoViewController: UIViewController {
     //MARK: Properties
     
     private lazy var bookView = BookInfoView()
-    private let bookModel: BookInfoViewModel
+    private let bookViewModel: BookInfoViewModel
     
     //MARK: Initialization
     
-    init (bookModel: BookInfoViewModel) {
-        self.bookModel = bookModel
+    init (bookViewModel: BookInfoViewModel) {
+        self.bookViewModel = bookViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,26 +34,27 @@ class BookInfoViewController: UIViewController {
         view = bookView
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        bookView.rentButton.applyGradient(colors: (bookViewModel.isAvailable() ? [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor] : [UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor]), textColor: .white)
+    }
     func configBook() {
-        setupData(library: bookModel.bookDetails)
+        setupData(library: bookViewModel.bookDetails)
+        bookView.availabilityBook.textColor = bookViewModel.isAvailable() ? .sushi : .persianRed
         bookView.rentButton.addTarget(self, action:#selector(rentButton), for: .touchUpInside)
-        bookView.rentButton.applyGradient(colors: ((bookView.availabilityBook.text == "Available") ? [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor] : [UIColor.gainsboro.cgColor]))
         bookView.addButton.addTarget(self, action:#selector(addButton), for: .touchUpInside)
-        bookView.availabilityBook.textColor = (bookView.availabilityBook.text == "Available") ? .sushi : .persianRed
     }
     
     //MARK: Action
     
     @objc func addButton() {
+        print("hola")
     }
-    
-    @objc func rentButton() {
+    @objc func rentButton(sender: UIButton) {
         alertConfiguration()
-        bookModel.rentLibrary()
+        bookViewModel.rentLibrary()
     }
     
     func alertConfiguration () {
-        let availableToF = (bookView.availabilityBook.text.self != nil) ? "Available" : "Unavailable"
         let title = NSLocalizedString("ALERT_BOOKED_SUCCESSFULLY", comment: "")
         let succesTitle = NSLocalizedString("COMMENT_BOOKED_SUCCESFULLY", comment: "")
         let errorTitle = NSLocalizedString("COMMENT_BOOKED_ERROR", comment: "")
@@ -62,23 +63,23 @@ class BookInfoViewController: UIViewController {
         let alert = UIAlertController(title: "OH NO!", message: noRentTitle.capitalized, preferredStyle: .alert)
         let error = UIAlertController(title: "ERROR", message: errorTitle.capitalized, preferredStyle: .alert)
         
-        if availableToF == "Available" {
+        if bookViewModel.isAvailable() {
             noti.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
             }))
             self.present(noti, animated: true, completion: nil)
-        } else if availableToF == "Unavailable" {
+        } else {
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
             }))
             self.present(alert, animated: true, completion: nil)
         }
-        else {
+/*       else {
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
             }))
             self.present(error, animated: true, completion: nil)
-        }
+        }*/
     }
     
     func setupData(library: Library?) {
@@ -87,6 +88,6 @@ class BookInfoViewController: UIViewController {
         bookView.availabilityBook.text = library?.status
         bookView.yearBook.text = library?.year
         bookView.genreBook.text = library?.genre
-        self.bookView.bookImage?.downloaded(from: library?.photo ?? "")
+        bookView.bookImage?.downloaded(from: library?.photo ?? "")
     }
 }

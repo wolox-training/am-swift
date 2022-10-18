@@ -44,11 +44,7 @@ final class BookInfoView: NibView {
             genreBook.textColor = .gray
         }
     }
-    @IBOutlet var rentButton: UIButton! {
-        didSet {
-            rentButton.setTitleColor(.white, for: UIControl.State())
-        }
-    }
+    @IBOutlet var rentButton: UIButton!
     @IBOutlet var addButton: UIButton! {
         didSet {
             addButton.layer.borderWidth = 2

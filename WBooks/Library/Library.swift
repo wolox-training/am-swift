@@ -41,3 +41,7 @@ struct Library: Decodable {
         }
     
 }
+/*enum status {
+    case Available
+    case Unavailable
+}*/

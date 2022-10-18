@@ -31,4 +31,8 @@ class BookInfoViewModel {
         }
     }
     
+    func isAvailable() -> Bool {
+        return bookDetails.status == "Available"
+    }
+    
 }

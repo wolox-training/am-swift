@@ -17,7 +17,7 @@
                 <outlet property="bookName" destination="jIi-hE-rfT" id="gSt-eQ-r7Q"/>
                 <outlet property="bookView" destination="iN0-l3-epB" id="owe-jb-jmj"/>
                 <outlet property="genreBook" destination="jTS-Ls-76Q" id="iPa-Ic-qVH"/>
-                <outlet property="rentButton" destination="Zl1-mb-IPG" id="vmd-pl-Pdn"/>
+                <outlet property="rentButton" destination="Zl1-mb-IPG" id="Wun-9X-N2w"/>
                 <outlet property="yearBook" destination="Ble-NF-VPX" id="N78-tm-DVu"/>
             </connections>
         </placeholder>
@@ -33,29 +33,6 @@
                         <constraint firstAttribute="height" constant="104" id="L1X-GF-Smw"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-eG-9Ja">
-                    <rect key="frame" x="25" y="145.33333333333334" width="277" height="46"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="46" id="HVb-zG-UQS"/>
-                    </constraints>
-                    <color key="tintColor" name="navigationBarColor"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
-                        <backgroundConfiguration key="background">
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="strokeColor" name="navigationBarColor"/>
-                        </backgroundConfiguration>
-                        <attributedString key="attributedTitle">
-                            <fragment content="ADD TO WISHLIST">
-                                <attributes>
-                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                    </buttonConfiguration>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIi-hE-rfT">
                     <rect key="frame" x="103" y="15" width="212" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -80,28 +57,47 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl1-mb-IPG">
-                    <rect key="frame" x="25" y="201.33333333333334" width="277" height="46"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="46" id="9Gx-oU-q2t"/>
-                        <constraint firstAttribute="width" constant="277" id="DSo-Cl-Nyw"/>
-                    </constraints>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="RENT">
-                        <color key="titleShadowColor" name="AccentColor"/>
-                    </state>
-                    <buttonConfiguration key="configuration" style="plain" title="RENT" cornerStyle="capsule">
-                        <backgroundConfiguration key="background"/>
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTS-Ls-76Q">
                     <rect key="frame" x="103" y="102.33333333333333" width="212" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-eG-9Ja">
+                    <rect key="frame" x="25" y="145.33333333333334" width="277" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="HVb-zG-UQS"/>
+                    </constraints>
+                    <color key="tintColor" name="navigationBarColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" name="navigationBarColor"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="ADD TO WISHLIST">
+                                <attributes>
+                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl1-mb-IPG">
+                    <rect key="frame" x="25" y="201.33333333333334" width="277" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="9Gx-oU-q2t"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="RENT"/>
+                    <buttonConfiguration key="configuration" style="plain" title="RENT" cornerStyle="capsule">
+                        <backgroundConfiguration key="background"/>
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                    </buttonConfiguration>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
@@ -136,9 +132,6 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="navigationBarColor">
             <color red="0.2196078431372549" green="0.66666666666666663" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

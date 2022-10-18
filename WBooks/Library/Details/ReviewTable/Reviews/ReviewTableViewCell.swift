@@ -41,7 +41,7 @@ class ReviewTableViewCell: UITableViewCell {
     func setupReviewData(reviewer: Reviewer?) {
         nameReviewer.text = reviewer?.info.name.capitalized
         commentReviewer.text = reviewer?.comment
-        self.iconReviewer?.downloaded(from: reviewer?.info.icon ?? "")
+        iconReviewer?.downloaded(from: reviewer?.info.icon ?? "")
     }
     @IBOutlet var singleLineView: UIView! {
         didSet {

@@ -12,8 +12,8 @@ class LibraryTableViewC: UIViewController {
     private lazy var libraryViewC = LibraryTableView()
     private let libraryTableViewModel: LibraryTableViewModel
     
-    init(viewModel: LibraryTableViewModel) {
-        self.libraryTableViewModel = viewModel
+    init(libraryTableViewModel: LibraryTableViewModel) {
+        self.libraryTableViewModel = libraryTableViewModel
         super.init(nibName: nil, bundle: nil)
     }
     

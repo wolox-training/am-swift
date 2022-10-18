@@ -12,12 +12,12 @@ class ReviewViewController: UIViewController {
     //MARK: Properties
     
     private lazy var reviewView = ReviewView()
-    private let reviewModel: ReviewViewModel
+    private let reviewViewModel: ReviewViewModel
     
     //MARK: Initialization
     
-    init (reviewModel: ReviewViewModel) {
-        self.reviewModel = reviewModel
+    init (reviewViewModel: ReviewViewModel) {
+        self.reviewViewModel = reviewViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,8 +30,8 @@ class ReviewViewController: UIViewController {
         reviewView.tableView.delegate = self
         reviewView.tableView.dataSource = self
         reviewView.tableView.registerCell(cellType: ReviewTableViewCell.self)
-        reviewModel.loadSampleLibrarys() {
-            self.reviewView.tableView.reloadData()
+        reviewViewModel.loadSampleLibrarys() {
+        self.reviewView.tableView.reloadData()
         }
     }
     
@@ -49,7 +49,7 @@ extension ReviewViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviewModel.reviewer.count
+        return reviewViewModel.reviewer.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +57,7 @@ extension ReviewViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReviewTableViewCell  else {
             fatalError("The dequeued cell is not an instance of ReviewTableViewCell.")
         }
-        cell.setupReviewData(reviewer: reviewModel.reviewer[indexPath.row])
+        cell.setupReviewData(reviewer: reviewViewModel.reviewer[indexPath.row])
         return cell
     }
     

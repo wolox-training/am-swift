@@ -37,4 +37,7 @@ extension UIImage {
         return UIImage(named: "defaultImage")!
     }
     
+    static var addImage: UIImage {
+        return UIImage(named: "addImage")!
+    }
 }

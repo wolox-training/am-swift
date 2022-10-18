@@ -22,9 +22,9 @@ class DetailsViewController: UIViewController {
     init(detailsViewModel: DetailsViewModel) {
         self.detailsViewModel = detailsViewModel
         let bookInfoViewModel = detailsViewModel.createBookViewModel()
-        bookInfoViewController = BookInfoViewController(bookModel: bookInfoViewModel)
+        bookInfoViewController = BookInfoViewController(bookViewModel: bookInfoViewModel)
         let reviewViewModel = detailsViewModel.createReviewViewModel()
-        reviewViewController = ReviewViewController(reviewModel: reviewViewModel)
+        reviewViewController = ReviewViewController(reviewViewModel: reviewViewModel)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,19 +35,18 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
-        addChild(bookInfoViewController)
-        detailsV.headerView.addSubview(bookInfoViewController.view)
-        detailsV.headerView.addSubViewWithConstraints(child: bookInfoViewController.view, parent: detailsV.headerView)
-        bookInfoViewController.didMove(toParent: self)
-        
-        addChild(reviewViewController)
-        detailsV.commentsView.addSubview(reviewViewController.view)
-        detailsV.commentsView.addSubViewWithConstraints(child: reviewViewController.view, parent: detailsV.commentsView)
-        reviewViewController.didMove(toParent: self)
+        loadSubviews(controller: reviewViewController, parentView: detailsV.commentsView)
+        loadSubviews(controller: bookInfoViewController, parentView: detailsV.headerView)
     }
     
     override func loadView() {
         view = detailsV
     }
     
+    func loadSubviews(controller: UIViewController, parentView: UIView) {
+        addChild(controller)
+        detailsV.commentsView.addSubview(controller.view)
+        detailsV.commentsView.addSubViewWithConstraints(child: controller.view, parent: parentView)
+        controller.didMove(toParent: self)
+    }
 }

@@ -70,6 +70,26 @@ class BookRepository {
         }
     }
     
+    func fetchPostAddNew(onSuccess: @escaping (Post) -> Void, onError: @escaping (Error) -> Void) {
+        let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/books")!
+        AF.request(url, method: .post).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                guard let books = try? JSONDecoder().decode(Post.self, from: JSONbooks) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                onSuccess(books)
+            case .failure(let error):
+                onError(error)
+            }
+        }
+    }
 }
 
 enum BookError: Error {
