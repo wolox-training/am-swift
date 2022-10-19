@@ -15,16 +15,11 @@ final class BookInfoView: NibView {
         didSet {
             backgroundColor = .clear
             bookView.layer.cornerRadius = 10
-            bookView.layer.shadowColor = UIColor.darkGray.cgColor
-            bookView.layer.shadowRadius = 3
-            bookView.layer.shadowOpacity = 0.2
-            bookView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
-            bookView.layer.masksToBounds = false
         }
     }
     @IBOutlet var bookImage: UIImageView! {
         didSet {
-            bookImage.layer.cornerRadius = 1
+            bookImage.layer.cornerRadius = 5
         }
     }
     @IBOutlet var bookName: UILabel!
@@ -44,9 +39,15 @@ final class BookInfoView: NibView {
             genreBook.textColor = .gray
         }
     }
-    @IBOutlet var rentButton: UIButton!
+    @IBOutlet var rentButton: UIButton! {
+        didSet {
+            rentButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString(String(localized: "RENT_BUTTON"), comment: "")), for: UIControl.State())
+        }
+    }
     @IBOutlet var addButton: UIButton! {
         didSet {
+            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+            addButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString(String(localized: "ADD_TO_WISHLIST_BUTTON"), comment: "")), for: UIControl.State())
             addButton.layer.borderWidth = 2
             addButton.layer.borderColor = UIColor.summerSky.cgColor
             addButton.layer.cornerRadius = 23

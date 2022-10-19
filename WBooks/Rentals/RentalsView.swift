@@ -9,10 +9,9 @@ import UIKit
 
 final class RentalsView: NibView {
     
-    @IBOutlet var rentalsView: UIView!
-    @IBOutlet var rentalsTableView: UITableView! {
+    @IBOutlet var rentalsView: UIView! {
         didSet {
-            rentalsTableView.backgroundColor = .aliceBlue
+            rentalsView.backgroundColor = .white
         }
     }
 

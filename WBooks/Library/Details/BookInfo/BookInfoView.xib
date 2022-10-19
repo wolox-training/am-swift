@@ -63,28 +63,16 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-eG-9Ja">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GoH-eG-9Ja">
                     <rect key="frame" x="25" y="145.33333333333334" width="277" height="46"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="HVb-zG-UQS"/>
                     </constraints>
                     <color key="tintColor" name="navigationBarColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
-                        <backgroundConfiguration key="background">
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="strokeColor" name="navigationBarColor"/>
-                        </backgroundConfiguration>
-                        <attributedString key="attributedTitle">
-                            <fragment content="ADD TO WISHLIST">
-                                <attributes>
-                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                    </buttonConfiguration>
+                    <state key="normal" title="Button">
+                        <attributedString key="attributedTitle"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl1-mb-IPG">
                     <rect key="frame" x="25" y="201.33333333333334" width="277" height="46"/>
@@ -92,11 +80,6 @@
                         <constraint firstAttribute="height" constant="46" id="9Gx-oU-q2t"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="RENT"/>
-                    <buttonConfiguration key="configuration" style="plain" title="RENT" cornerStyle="capsule">
-                        <backgroundConfiguration key="background"/>
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                    </buttonConfiguration>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

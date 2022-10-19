@@ -31,8 +31,11 @@ final class LoginView: NibView {
     }
     @IBOutlet var signinButton: UIButton! {
         didSet {
+            signinButton.setTitleColor(.summerSky, for: .normal)
+            signinButton.backgroundColor = .white
+            signinButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
             signinButton.setTitle(NSLocalizedString("SIGN_IN_BUTTON", comment: ""), for: .normal)
-            signinButton.tintColor = .summerSky
+            signinButton.layer.cornerRadius = 27
         }
     }
     

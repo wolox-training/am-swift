@@ -18,7 +18,7 @@ class TabBarController: UITabBarController {
         let navigationWishList = createItem(controller: wishListController, title: "TITLE_VIEW_WISHLIST", image: .wishlist, tag: 1)
         let addNewController = AddNewController(addNewViewModel: AddNewViewModel())
         let navigationAddNew = createItem(controller: addNewController, title: "TITLE_VIEW_ADDNEW", image: .addnew, tag: 3)
-        let rentalsController = RentalsController()
+        let rentalsController = RentalsViewController()
         let navigationRentals = createItem(controller: rentalsController, title: "TITLE_VIEW_RENTALS", image: .rentals, tag: 4)
         viewControllers = [navigationLibrary, navigationWishList, navigationAddNew, navigationRentals]
        

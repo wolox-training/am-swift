@@ -3,7 +3,7 @@
 "BYZ-38-t0r.title" = "Login";
 
 /* Class = "UINavigationItem"; title = "LIBRARY"; ObjectID = "DfN-hg-rPV"; */
-"DfN-hg-rPV.title" = "BIBLIOTECA";
+"DfN-hg-rPV.title" = "Biblioteca";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Fcr-wd-3vB"; */
 "Fcr-wd-3vB.text" = "Label";
@@ -18,7 +18,7 @@
 "nEO-Zo-8MM.placeholder" = "Username";
 
 /* Class = "UIButton"; configuration.title = "SIGN IN"; ObjectID = "tCq-Vh-zQj"; */
-"tCq-Vh-zQj.configuration.title" = "INGRESAR";
+"tCq-Vh-zQj.configuration.title" = "Ingresar";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tCq-Vh-zQj"; */
 "tCq-Vh-zQj.normalTitle" = "Button";

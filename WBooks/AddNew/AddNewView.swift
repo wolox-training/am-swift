@@ -15,13 +15,7 @@ final class AddNewView: NibView {
     }
     @IBOutlet var addNewView: UIView! {
         didSet {
-            addNewView.layer.cornerRadius = 10
-            addNewView.backgroundColor = .white
-            addNewView.layer.shadowColor = UIColor.darkGray.cgColor
-            addNewView.layer.shadowRadius = 3
-            addNewView.layer.shadowOpacity = 0.2
-            addNewView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
-            addNewView.layer.masksToBounds = false
+            cornerAndShadow(view: addNewView)
         }
     }
     @IBOutlet var addImage: UIImageView! {
@@ -32,65 +26,65 @@ final class AddNewView: NibView {
     }
     @IBOutlet var titleBook: UITextField! {
         didSet {
-            titleBook.placeholder = NSLocalizedString("TITLE_BOOK".capitalized, comment: "")
-            AddNewViewModel().editTexts(object: titleBook)
+            titleBook.placeholder = NSLocalizedString(String(localized: "TITLE_BOOK").capitalized, comment: "")
+            editTexts(object: titleBook)
 
         }
     }
     @IBOutlet var oneSingleLine: UIView! {
         didSet {
-            AddNewViewModel().editLines(object: oneSingleLine)
+            editLines(object: oneSingleLine)
         }
     }
     @IBOutlet var authorBook: UITextField! {
         didSet {
-            authorBook.placeholder = NSLocalizedString("AUTHOR_BOOK".capitalized, comment: "")
-            AddNewViewModel().editTexts(object: authorBook)
+            authorBook.placeholder = NSLocalizedString(String(localized: "AUTHOR_BOOK").capitalized, comment: "")
+            editTexts(object: authorBook)
         }
     }
     @IBOutlet var twoSingleLine: UIView! {
         didSet {
-            AddNewViewModel().editLines(object: twoSingleLine)
+            editLines(object: twoSingleLine)
         }
     }
     @IBOutlet var yearBook: UITextField! {
         didSet {
-            yearBook.placeholder = NSLocalizedString("YEAR_BOOK".capitalized, comment: "")
-            AddNewViewModel().editTexts(object: yearBook)
+            yearBook.placeholder = NSLocalizedString(String(localized: "YEAR_BOOK").capitalized, comment: "")
+            editTexts(object: yearBook)
         }
     }
     
     @IBOutlet var threeSingleLine: UIView! {
         didSet {
-            AddNewViewModel().editLines(object: threeSingleLine)
+            editLines(object: threeSingleLine)
         }
     }
     @IBOutlet var genreBook: UITextField! {
         didSet {
-            genreBook.placeholder = NSLocalizedString("GENRE_BOOK".capitalized, comment: "")
-            AddNewViewModel().editTexts(object: genreBook)
+            genreBook.placeholder = NSLocalizedString(String(localized: "GENRE_BOOK").capitalized, comment: "")
+            editTexts(object: genreBook)
         }
     }
     @IBOutlet var fourSingleLine: UIView! {
         didSet {
-            AddNewViewModel().editLines(object: fourSingleLine)
+            editLines(object: fourSingleLine)
         }
     }
     @IBOutlet var descriptionBook: UITextField! {
         didSet {
-            descriptionBook.placeholder = NSLocalizedString("DESCRIPTION_BOOK".capitalized, comment: "")
-            AddNewViewModel().editTexts(object: descriptionBook)
+            descriptionBook.placeholder = NSLocalizedString(String(localized: "DESCRIPTION_BOOK").capitalized, comment: "")
+            editTexts(object: descriptionBook)
         }
     }
     @IBOutlet var fiveSingleLine: UIView! {
         didSet {
-            AddNewViewModel().editLines(object: fiveSingleLine)
+            editLines(object: fiveSingleLine)
         }
     }
     @IBOutlet var submitButton: UIButton! {
         didSet {
-            submitButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString("SUBMIT_BUTTON", comment: "")), for: UIControl.State())
-            submitButton.applyGradient(colors: [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor], textColor: .white)
+            submitButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+            submitButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString(String(localized: "SUBMIT_BUTTON_TEXT"), comment: "")), for: UIControl.State())
         }
     }
     @IBOutlet var selectBookImage: UITapGestureRecognizer!

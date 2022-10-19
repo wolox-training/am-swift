@@ -9,7 +9,7 @@ import UIKit
 
 class AddNewController: UIViewController {
     
-    private lazy var addnewView = AddNewView()
+    private lazy var addNewView = AddNewView()
     private let addNewViewModel: AddNewViewModel
     let imagePickerController = UIImagePickerController()
     
@@ -25,13 +25,17 @@ class AddNewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
-        addnewView.submitButton.addTarget(self, action:#selector(submitButton), for: .touchUpInside)
+        addNewView.submitButton.addTarget(self, action:#selector(submitButton), for: .touchUpInside)
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
     }
     
     override func loadView() {
-        view = addnewView
+        view = addNewView
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        addNewView.submitButton.applyGradient(colors: [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor], textColor: UIColor.white)
     }
     
     //MARK: Action
@@ -54,7 +58,7 @@ extension AddNewController: UIImagePickerControllerDelegate, UINavigationControl
         guard let selectedImage = info[.originalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
-        addnewView.addImage.image = selectedImage
+        addNewView.addImage.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
     

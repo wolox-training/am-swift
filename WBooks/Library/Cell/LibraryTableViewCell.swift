@@ -13,12 +13,7 @@ class LibraryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var libraryView: UIView! {
         didSet {
-            libraryView.layer.cornerRadius = 10
-            libraryView.layer.shadowColor = UIColor.darkGray.cgColor
-            libraryView.layer.shadowRadius = 3
-            libraryView.layer.shadowOpacity = 0.2
-            libraryView.layer.shadowOffset = CGSize(width: 0.0, height: 0.1)
-            libraryView.layer.masksToBounds = false
+           cornerAndShadow(view: libraryView)
         }
     }
     @IBOutlet weak var nameBookLabel: UILabel!

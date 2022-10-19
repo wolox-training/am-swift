@@ -35,7 +35,7 @@ class BookInfoViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        bookView.rentButton.applyGradient(colors: (bookViewModel.isAvailable() ? [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor] : [UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor]), textColor: .white)
+        bookView.rentButton.applyGradient(colors: (bookViewModel.isAvailable() ? [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor] : [UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor]), textColor: UIColor.white)
     }
     func configBook() {
         setupData(library: bookViewModel.bookDetails)
@@ -55,10 +55,10 @@ class BookInfoViewController: UIViewController {
     }
     
     func alertConfiguration () {
-        let title = NSLocalizedString("ALERT_BOOKED_SUCCESSFULLY", comment: "")
-        let succesTitle = NSLocalizedString("COMMENT_BOOKED_SUCCESFULLY", comment: "")
-        let errorTitle = NSLocalizedString("COMMENT_BOOKED_ERROR", comment: "")
-        let noRentTitle = NSLocalizedString("COMMENT_BOOKED_NO_RENT", comment: "")
+        let title = NSLocalizedString(String(localized: "ALERT_BOOKED_SUCCESSFULLY"), comment: "")
+        let succesTitle = NSLocalizedString(String(localized: "COMMENT_BOOKED_SUCCESFULLY").capitalized, comment: "")
+        let errorTitle = NSLocalizedString(String(localized: "COMMENT_BOOKED_ERROR").capitalized, comment: "")
+        let noRentTitle = NSLocalizedString(String(localized: "COMMENT_BOOKED_NO_RENT").capitalized, comment: "")
         let noti = UIAlertController(title: title, message: succesTitle.capitalized, preferredStyle: .alert)
         let alert = UIAlertController(title: "OH NO!", message: noRentTitle.capitalized, preferredStyle: .alert)
         let error = UIAlertController(title: "ERROR", message: errorTitle.capitalized, preferredStyle: .alert)
