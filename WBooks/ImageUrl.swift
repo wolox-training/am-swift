@@ -21,7 +21,7 @@ extension UIImageView {
                       let image = UIImage(data: data)
                         else {
                             return DispatchQueue.main.async() { [weak self] in
-                                self?.image = UIImage(named: "defaultImage")
+                                self?.image = .defaultBook
                             }
                         }
                     DispatchQueue.main.async() { [weak self] in
@@ -35,7 +35,7 @@ extension UIImageView {
 
     func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFill) {
         guard let url = URL(string: link) else {
-            return self.image = UIImage(named: "defaultImage")
+            return self.image = .defaultBook
         }
         downloaded(from: url, contentMode: mode)
     }

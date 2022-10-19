@@ -2,7 +2,7 @@
 //  DetailsViewModel.swift
 //  WBooks
 //
-//  Created by ana.mancuso on 11/10/2022.
+//  Created by ana.mancuso on 17/10/2022.
 //
 
 import UIKit
@@ -12,38 +12,18 @@ class DetailsViewModel {
     //MARK: Properties
     
     let bookDetails: Library
-    var reviewer = [Reviewer]()
-    private let bookRepository: BookRepository
-    var changeList: (() -> Void)?
     
-    init(bookDetails: Library, bookRepository: BookRepository = BookRepository()) {
+    init(bookDetails: Library) {
         self.bookDetails = bookDetails
-        self.bookRepository = bookRepository
     }
     
-    func loadSampleLibrarys() {
-        bookRepository.fetchComments (id: bookDetails.id){ [weak self] comments in
-            guard let selfAux = self else {
-                return
-            }
-            selfAux.reviewer = comments
-            selfAux.changeList?()
-        } onError: { errorLista in
-            debugPrint(errorLista.localizedDescription)
-        }
+    func createBookViewModel() -> BookInfoViewModel {
+        return BookInfoViewModel(bookDetails: bookDetails)
     }
     
-    func rentLibrary () {
-        bookRepository.fetchPost(id: bookDetails.id){ [weak self] rent in
-            guard let selfAux = self else {
-                return
-            }
-            debugPrint(rent)
-        } onError: { errorLista in
-            debugPrint(errorLista.localizedDescription)
-        }
+    func createReviewViewModel() -> ReviewViewModel {
+        return ReviewViewModel(bookID: bookDetails.id)
     }
     
 }
-
 

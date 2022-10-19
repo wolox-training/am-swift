@@ -77,6 +77,7 @@
                 <outlet property="iconReviewer" destination="clX-zn-DKR" id="xW8-BS-74s"/>
                 <outlet property="nameReviewer" destination="UIT-W9-Fu8" id="EdT-g7-4ff"/>
                 <outlet property="reviewView" destination="CH3-3I-sRn" id="iZQ-EX-VLo"/>
+                <outlet property="singleLineView" destination="3Wr-oh-BMz" id="oSD-La-jvi"/>
             </connections>
             <point key="canvasLocation" x="134.61538461538461" y="-247.03791469194312"/>
         </view>

@@ -21,7 +21,7 @@ class ReviewTableViewCell: UITableViewCell {
     @IBOutlet var nameReviewer: UILabel!
     @IBOutlet var commentReviewer: UILabel! {
         didSet {
-            commentReviewer.textColor = UIColor(red: 129/255, green: 129/255, blue: 129/255, alpha: 1)
+            commentReviewer.textColor = .gray
         }
     }
     @IBOutlet var iconReviewer: UIImageView! {
@@ -42,6 +42,12 @@ class ReviewTableViewCell: UITableViewCell {
         nameReviewer.text = reviewer?.info.name.capitalized
         commentReviewer.text = reviewer?.comment
         self.iconReviewer?.downloaded(from: reviewer?.info.icon ?? "")
+    }
+    @IBOutlet var singleLineView: UIView! {
+        didSet {
+            singleLineView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
+            singleLineView.backgroundColor = .gainsboro
+        }
     }
     
 }
