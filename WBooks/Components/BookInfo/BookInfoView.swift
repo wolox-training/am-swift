@@ -41,13 +41,13 @@ final class BookInfoView: NibView {
     }
     @IBOutlet var rentButton: UIButton! {
         didSet {
-            rentButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString(String(localized: "RENT_BUTTON"), comment: "")), for: UIControl.State())
+            rentButton.setAttributedTitle(NSAttributedString(string: String(localized: "RENT_BUTTON")), for: UIControl.State())
         }
     }
     @IBOutlet var addButton: UIButton! {
         didSet {
             addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-            addButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString(String(localized: "ADD_TO_WISHLIST_BUTTON"), comment: "")), for: UIControl.State())
+            addButton.setAttributedTitle(NSAttributedString(string: String(localized: "ADD_TO_WISHLIST_BUTTON")), for: UIControl.State())
             addButton.layer.borderWidth = 2
             addButton.layer.borderColor = UIColor.summerSky.cgColor
             addButton.layer.cornerRadius = 23

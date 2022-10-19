@@ -60,10 +60,10 @@ class BookInfoViewController: UIViewController {
     }
     
     func alertConfiguration () {
-        let title = NSLocalizedString(String(localized: "ALERT_BOOKED_SUCCESSFULLY"), comment: "")
-        let succesTitle = NSLocalizedString(String(localized: "COMMENT_BOOKED_SUCCESFULLY").capitalized, comment: "")
-        let errorTitle = NSLocalizedString(String(localized: "COMMENT_BOOKED_ERROR").capitalized, comment: "")
-        let noRentTitle = NSLocalizedString(String(localized: "COMMENT_BOOKED_NO_RENT").capitalized, comment: "")
+        let title = String(localized: "ALERT_BOOKED_SUCCESSFULLY")
+        let succesTitle = String(localized: "COMMENT_BOOKED_SUCCESFULLY").capitalized
+        let errorTitle = String(localized: "COMMENT_BOOKED_ERROR").capitalized
+        let noRentTitle = String(localized: "COMMENT_BOOKED_NO_RENT").capitalized
         let noti = UIAlertController(title: title, message: succesTitle.capitalized, preferredStyle: .alert)
         let alert = UIAlertController(title: "OH NO!", message: noRentTitle.capitalized, preferredStyle: .alert)
         let error = UIAlertController(title: "ERROR", message: errorTitle.capitalized, preferredStyle: .alert)

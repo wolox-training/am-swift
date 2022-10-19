@@ -25,11 +25,8 @@ class AddNewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
-        addNewView.submitButton.addTarget(self, action:#selector(addGestureRecognizeImage), for: .touchUpInside)
-        let tap = UIGestureRecognizer(target: self, action: #selector(addGestureRecognizeImage))
-        addNewView.addImage.addGestureRecognizer(tap)
-        addNewView.addImage.isUserInteractionEnabled = true
-        
+        addNewView.submitButton.addTarget(self, action: #selector(submitButton), for: .touchUpInside)
+        addNewView.addButtonImage.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
         addNewView.yearBook.delegate = self
     }
     
@@ -38,44 +35,29 @@ class AddNewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        addNewView.submitButton.applyGradient(colors: [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor], textColor: UIColor.white)
+        addNewView.submitButton.applyGradient(colors: [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor],
+                                              textColor: UIColor.white)
     }
     
-    @objc func addGestureRecognizeImage() {
+    @objc func selectImage() {
         let alertController = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
-                let imagePickerController = UIImagePickerController()
-
-                imagePickerController.delegate = self
-
-                let chooseAction = UIAlertAction(title: "Gallery", style: .default) { _ in
-
-                    imagePickerController.sourceType = .photoLibrary
-
-                    self.present(imagePickerController, animated: true, completion: .none)
-
-                }
-
-                alertController.addAction(chooseAction)
-
-                if UIImagePickerController.isSourceTypeAvailable(.camera) {
-
-                    let takeAction = UIAlertAction(title:"Camera", style: .default) { _ in
-
-                        imagePickerController.sourceType = .camera
-
-                        self.present(imagePickerController, animated: true, completion: .none)
-
-                    }
-
-                    alertController.addAction(takeAction)
-
-                }
-
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: .none)
-
-                alertController.addAction(cancelAction)
-
-                self.present(alertController, animated: true, completion: nil)
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        let chooseAction = UIAlertAction(title: String(localized: "ALERT_GALLERY"), style: .default) { _ in
+            imagePickerController.sourceType = .photoLibrary
+            self.present(imagePickerController, animated: true, completion: .none)
+        }
+        alertController.addAction(chooseAction)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let takeAction = UIAlertAction(title: String(localized: "ALERT_CAMERA"), style: .default) { _ in
+                imagePickerController.sourceType = .camera
+                self.present(imagePickerController, animated: true, completion: .none)
+            }
+            alertController.addAction(takeAction)
+        }
+        let cancelAction = UIAlertAction(title: String(localized: "ALERT_CANCEL"), style: .cancel, handler: .none)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     //MARK: Action

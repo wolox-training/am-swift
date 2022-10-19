@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewView" customModule="WBooks" customModuleProvider="target">
             <connections>
+                <outlet property="addButtonImage" destination="QTa-Z8-MvE" id="REm-AH-L7k"/>
                 <outlet property="addImage" destination="G0k-ot-45G" id="WZt-ys-3pj"/>
                 <outlet property="addNewView" destination="URU-lz-rkY" id="IP8-sH-cE3"/>
                 <outlet property="authorBook" destination="gjp-5s-M1V" id="EWW-hs-GKf"/>
@@ -125,6 +126,15 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title=""/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTa-Z8-MvE">
+                            <rect key="frame" x="25" y="25" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="L30-e3-9Xd"/>
+                                <constraint firstAttribute="width" constant="100" id="cIJ-9V-ypB"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -136,8 +146,10 @@
                         <constraint firstItem="oxj-PQ-xP5" firstAttribute="leading" secondItem="URU-lz-rkY" secondAttribute="leading" constant="25" id="8Tr-9F-Gtl"/>
                         <constraint firstItem="JgO-Yj-kjQ" firstAttribute="top" secondItem="j74-zt-0hX" secondAttribute="bottom" constant="20" id="BbT-FI-Kok"/>
                         <constraint firstItem="gKp-do-A2b" firstAttribute="leading" secondItem="URU-lz-rkY" secondAttribute="leading" constant="25" id="DIv-kl-o0Y"/>
+                        <constraint firstItem="gKp-do-A2b" firstAttribute="top" secondItem="QTa-Z8-MvE" secondAttribute="bottom" constant="33" id="FJK-JL-u6l"/>
                         <constraint firstAttribute="trailing" secondItem="gjp-5s-M1V" secondAttribute="trailing" constant="25" id="G9h-zF-yeT"/>
                         <constraint firstAttribute="trailing" secondItem="PjM-0t-i1D" secondAttribute="trailing" constant="25" id="GGp-g0-QBQ"/>
+                        <constraint firstItem="QTa-Z8-MvE" firstAttribute="top" secondItem="URU-lz-rkY" secondAttribute="top" constant="25" id="L1n-pN-xSc"/>
                         <constraint firstItem="BAg-oi-Ot2" firstAttribute="leading" secondItem="URU-lz-rkY" secondAttribute="leading" constant="25" id="Ogd-aX-uOS"/>
                         <constraint firstAttribute="trailing" secondItem="oxj-PQ-xP5" secondAttribute="trailing" constant="25" id="Pa2-qb-wx7"/>
                         <constraint firstItem="gjp-5s-M1V" firstAttribute="top" secondItem="1HL-5M-opS" secondAttribute="bottom" constant="20" id="QFg-0i-0pc"/>
@@ -156,6 +168,7 @@
                         <constraint firstAttribute="trailing" secondItem="2A2-DG-tji" secondAttribute="trailing" constant="25" id="en0-uE-d4q"/>
                         <constraint firstItem="gjp-5s-M1V" firstAttribute="leading" secondItem="URU-lz-rkY" secondAttribute="leading" constant="25" id="f8F-QK-MXg"/>
                         <constraint firstItem="1HL-5M-opS" firstAttribute="top" secondItem="gKp-do-A2b" secondAttribute="bottom" id="fbY-rx-mna"/>
+                        <constraint firstItem="QTa-Z8-MvE" firstAttribute="leading" secondItem="URU-lz-rkY" secondAttribute="leading" constant="25" id="hnZ-aR-cLF"/>
                         <constraint firstItem="PjM-0t-i1D" firstAttribute="top" secondItem="2A2-DG-tji" secondAttribute="bottom" constant="50" id="m3j-Kx-bAL"/>
                         <constraint firstAttribute="trailing" secondItem="1HL-5M-opS" secondAttribute="trailing" constant="25" id="nWe-Z5-Ijg"/>
                         <constraint firstItem="s3c-xU-rRc" firstAttribute="top" secondItem="nx1-mv-GWP" secondAttribute="bottom" constant="20" id="olM-kv-hct"/>
