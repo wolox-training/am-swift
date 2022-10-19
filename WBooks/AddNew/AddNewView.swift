@@ -28,7 +28,6 @@ final class AddNewView: NibView {
         didSet {
             titleBook.placeholder = NSLocalizedString(String(localized: "TITLE_BOOK").capitalized, comment: "")
             editTexts(object: titleBook)
-
         }
     }
     @IBOutlet var oneSingleLine: UIView! {
@@ -87,7 +86,5 @@ final class AddNewView: NibView {
             submitButton.setAttributedTitle(NSAttributedString(string: NSLocalizedString(String(localized: "SUBMIT_BUTTON_TEXT"), comment: "")), for: UIControl.State())
         }
     }
-    @IBOutlet var selectBookImage: UITapGestureRecognizer!
-    
     
 }

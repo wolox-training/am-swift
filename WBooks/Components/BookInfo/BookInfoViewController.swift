@@ -35,8 +35,12 @@ class BookInfoViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        bookView.rentButton.applyGradient(colors: (bookViewModel.isAvailable() ? [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor] : [UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor]), textColor: UIColor.white)
+        bookView.rentButton.applyGradient(colors: (bookViewModel.isAvailable() ?
+                                                   [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor] :
+                                                    [UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor, UIColor.gainsboro.cgColor]),
+                                          textColor: .white)
     }
+    
     func configBook() {
         setupData(library: bookViewModel.bookDetails)
         bookView.availabilityBook.textColor = bookViewModel.isAvailable() ? .sushi : .persianRed
@@ -47,8 +51,9 @@ class BookInfoViewController: UIViewController {
     //MARK: Action
     
     @objc func addButton() {
-        print("hola")
+        debugPrint("hola")
     }
+    
     @objc func rentButton(sender: UIButton) {
         alertConfiguration()
         bookViewModel.rentLibrary()
@@ -90,4 +95,5 @@ class BookInfoViewController: UIViewController {
         bookView.genreBook.text = library?.genre
         bookView.bookImage?.downloaded(from: library?.photo ?? "")
     }
+    
 }

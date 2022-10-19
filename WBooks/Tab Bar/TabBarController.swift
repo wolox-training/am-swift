@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let libraryController = LibraryTableViewC(libraryTableViewModel: LibraryTableViewModel())
+        let libraryController = LibraryTableViewController(libraryTableViewModel: LibraryTableViewModel())
         let navigationLibrary = createItem(controller: libraryController, title: "TITLE_VIEW_LIBRARY", image: .home, tag: 0)
         let wishListController = WishListController()
         let navigationWishList = createItem(controller: wishListController, title: "TITLE_VIEW_WISHLIST", image: .wishlist, tag: 1)

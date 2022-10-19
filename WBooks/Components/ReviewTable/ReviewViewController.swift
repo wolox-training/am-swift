@@ -53,8 +53,7 @@ extension ReviewViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "ReviewTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ReviewTableViewCell  else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReviewTableViewCell.cellIdentifier, for: indexPath) as? ReviewTableViewCell  else {
             fatalError("The dequeued cell is not an instance of ReviewTableViewCell.")
         }
         cell.setupReviewData(reviewer: reviewViewModel.reviewer[indexPath.row])

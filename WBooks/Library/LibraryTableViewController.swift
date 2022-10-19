@@ -1,5 +1,5 @@
 //
-//  LibraryTableViewC.swift
+//  LibraryTableViewController.swift
 //  WBooks
 //
 //  Created by ana.mancuso on 27/09/2022.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class LibraryTableViewC: UIViewController {
+class LibraryTableViewController: UIViewController {
     
-    private lazy var libraryViewC = LibraryTableView()
+    private lazy var libraryTableView = LibraryTableView()
     private let libraryTableViewModel: LibraryTableViewModel
     
     init(libraryTableViewModel: LibraryTableViewModel) {
@@ -26,23 +26,23 @@ class LibraryTableViewC: UIViewController {
         title = NSLocalizedString("TITLE_VIEW_LIBRARY", comment: "")
         configTableView()
         libraryTableViewModel.changeList = { [weak self] in
-            self?.libraryViewC.tableView.reloadData()
+            self?.libraryTableView.tableView.reloadData()
         }
     }
     
     override func loadView() {
-        view = libraryViewC
+        view = libraryTableView
     }
     
     func configTableView() {
-        libraryViewC.tableView.delegate = self
-        libraryViewC.tableView.dataSource = self
-        libraryViewC.tableView.registerCell(cellType: LibraryTableViewCell.self)
+        libraryTableView.tableView.delegate = self
+        libraryTableView.tableView.dataSource = self
+        libraryTableView.tableView.registerCell(cellType: LibraryTableViewCell.self)
         libraryTableViewModel.loadSampleLibrarys()
     }
     
 }
-extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
+extension LibraryTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Table view data source
     
@@ -55,8 +55,7 @@ extension LibraryTableViewC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "LibraryTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LibraryTableViewCell  else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: LibraryTableViewCell.cellIdentifier, for: indexPath) as? LibraryTableViewCell  else {
             fatalError("The dequeued cell is not an instance of LibraryTableViewCell.")
         }
         cell.setupData(library: libraryTableViewModel.library[indexPath.row])

@@ -1,5 +1,5 @@
 //
-//  ImageExtension.swift
+//  UIImageExtension.swift
 //  WBooks
 //
 //  Created by ana.mancuso on 17/10/2022.

@@ -11,6 +11,8 @@ class LibraryTableViewCell: UITableViewCell {
     
     //    MARK: Properties
     
+    let cellIdentifier = "LibraryTableViewCell"
+    
     @IBOutlet weak var libraryView: UIView! {
         didSet {
            cornerAndShadow(view: libraryView)
@@ -33,7 +35,7 @@ class LibraryTableViewCell: UITableViewCell {
     func setupData(library: Library?) {
         nameBookLabel.text = library?.name
         autorBookName.text = library?.name2
-        self.photoBookView?.downloaded(from: library?.photo ?? "")
+        photoBookView?.downloaded(from: library?.photo ?? "")
     }
     
 }

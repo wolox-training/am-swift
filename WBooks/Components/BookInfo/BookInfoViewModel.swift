@@ -22,7 +22,7 @@ class BookInfoViewModel {
     
     func rentLibrary () {
         bookRepository.fetchPost(id: bookDetails.id){ [weak self] rent in
-            guard let selfAux = self else {
+            guard let _ = self else {
                 return
             }
             debugPrint(rent)

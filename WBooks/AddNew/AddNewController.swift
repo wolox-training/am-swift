@@ -25,9 +25,12 @@ class AddNewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("TITLE_VIEW_DETAILS", comment: "")
-        addNewView.submitButton.addTarget(self, action:#selector(submitButton), for: .touchUpInside)
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
+        addNewView.submitButton.addTarget(self, action:#selector(addGestureRecognizeImage), for: .touchUpInside)
+        let tap = UIGestureRecognizer(target: self, action: #selector(addGestureRecognizeImage))
+        addNewView.addImage.addGestureRecognizer(tap)
+        addNewView.addImage.isUserInteractionEnabled = true
+        
+        addNewView.yearBook.delegate = self
     }
     
     override func loadView() {
@@ -38,13 +41,49 @@ class AddNewController: UIViewController {
         addNewView.submitButton.applyGradient(colors: [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor], textColor: UIColor.white)
     }
     
+    @objc func addGestureRecognizeImage() {
+        let alertController = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
+                let imagePickerController = UIImagePickerController()
+
+                imagePickerController.delegate = self
+
+                let chooseAction = UIAlertAction(title: "Gallery", style: .default) { _ in
+
+                    imagePickerController.sourceType = .photoLibrary
+
+                    self.present(imagePickerController, animated: true, completion: .none)
+
+                }
+
+                alertController.addAction(chooseAction)
+
+                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+
+                    let takeAction = UIAlertAction(title:"Camera", style: .default) { _ in
+
+                        imagePickerController.sourceType = .camera
+
+                        self.present(imagePickerController, animated: true, completion: .none)
+
+                    }
+
+                    alertController.addAction(takeAction)
+
+                }
+
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: .none)
+
+                alertController.addAction(cancelAction)
+
+                self.present(alertController, animated: true, completion: nil)
+    }
+    
     //MARK: Action
     
     @objc func submitButton() {
+        
     }
-    @IBAction func selectBookImage(_ sender: UITapGestureRecognizer) {
-        present(imagePickerController, animated: true, completion: nil)
-    }
+    
 }
 extension AddNewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -60,6 +99,27 @@ extension AddNewController: UIImagePickerControllerDelegate, UINavigationControl
         }
         addNewView.addImage.image = selectedImage
         dismiss(animated: true, completion: nil)
+    }
+    
+}
+extension AddNewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        switch textField {
+        case addNewView.titleBook:
+            break
+        case addNewView.authorBook:
+            break
+        case addNewView.yearBook:
+            break
+        case addNewView.descriptionBook:
+            break
+        case addNewView.genreBook:
+            break
+        default:
+            break
+        }
+        return true
     }
     
 }

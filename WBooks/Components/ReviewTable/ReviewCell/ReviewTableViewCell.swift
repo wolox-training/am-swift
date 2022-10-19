@@ -11,6 +11,8 @@ class ReviewTableViewCell: UITableViewCell {
 
     //    MARK: Properties
     
+    let cellIdentifier = "ReviewTableViewCell"
+    
     @IBOutlet var reviewView: UIView! {
         didSet {
             reviewView.backgroundColor = .clear
@@ -29,6 +31,12 @@ class ReviewTableViewCell: UITableViewCell {
             iconReviewer.layer.cornerRadius = 25
         }
     }
+    @IBOutlet var singleLineView: UIView! {
+        didSet {
+            singleLineView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
+            singleLineView.backgroundColor = .gainsboro
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,12 +50,6 @@ class ReviewTableViewCell: UITableViewCell {
         nameReviewer.text = reviewer?.info.name.capitalized
         commentReviewer.text = reviewer?.comment
         iconReviewer?.downloaded(from: reviewer?.info.icon ?? "")
-    }
-    @IBOutlet var singleLineView: UIView! {
-        didSet {
-            singleLineView.heightAnchor.constraint(equalToConstant: 0.8).isActive = true
-            singleLineView.backgroundColor = .gainsboro
-        }
     }
     
 }
