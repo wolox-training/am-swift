@@ -28,6 +28,12 @@ class AddNewController: UIViewController {
         addNewView.submitButton.addTarget(self, action: #selector(submitButton), for: .touchUpInside)
         addNewView.addButtonImage.addTarget(self, action: #selector(selectImage), for: .touchUpInside)
         addNewView.yearBook.delegate = self
+        delegateTextField(textField: addNewView.descriptionBook)
+        delegateTextField(textField: addNewView.titleBook)
+        delegateTextField(textField: addNewView.authorBook)
+        delegateTextField(textField: addNewView.yearBook)
+        delegateTextField(textField: addNewView.genreBook)
+        
     }
     
     override func loadView() {
@@ -38,6 +44,13 @@ class AddNewController: UIViewController {
         addNewView.submitButton.applyGradient(colors: [UIColor.lightSeaGreen.cgColor, UIColor.summerSky.cgColor,  UIColor.mediumTurquoise.cgColor],
                                               textColor: UIColor.white)
     }
+    
+    func delegateTextField(textField: UITextField)
+    {
+        textField.delegate = self
+    }
+    
+    //MARK: Action
     
     @objc func selectImage() {
         let alertController = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
@@ -60,12 +73,39 @@ class AddNewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    //MARK: Action
-    
     @objc func submitButton() {
-        
+        let successSubmitTitle = String(localized: "ALERT_BOOKED_SUCCESFULLY")
+        let succesSubmit = String(localized: "ALERT_SUBMIT_SUCCESS")
+        let errorSubmit = String(localized: "ALERT_SUBMIT_ERROR")
+        let successAlert = UIAlertController(title: successSubmitTitle, message: succesSubmit, preferredStyle: .alert)
+        let errorAlert = UIAlertController(title: "ERROR", message: errorSubmit, preferredStyle: .alert)
+        if (addNewView.titleBook.textFieldEdit() &&
+            addNewView.yearBook.textFieldEdit() &&
+            addNewView.genreBook.textFieldEdit() &&
+            addNewView.authorBook.textFieldEdit() &&
+            addNewView.descriptionBook.textFieldEdit()) {
+            addNewViewModel.setContent(title: addNewView.titleBook.text ?? "",
+                                       author: addNewView.authorBook.text ?? "",
+                                       genre: addNewView.genreBook.text ?? "",
+                                       year: addNewView.yearBook.text ?? "",
+                                       photo: "https://img.freepik.com/vector-gratis/libro-abierto-paginas-vacias_1308-79363.jpg?w=2000")
+            addNewViewModel.uploadBook {
+                
+            }
+            successAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(successAlert, animated: true, completion: nil)
+        }
+        else {
+            errorAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(errorAlert, animated: true, completion: nil)
+        }
     }
     
+
 }
 extension AddNewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -86,7 +126,7 @@ extension AddNewController: UIImagePickerControllerDelegate, UINavigationControl
 }
 extension AddNewController: UITextFieldDelegate {
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         switch textField {
         case addNewView.titleBook:
             break

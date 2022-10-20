@@ -61,12 +61,11 @@ class BookInfoViewController: UIViewController {
     
     func alertConfiguration () {
         let title = String(localized: "ALERT_BOOKED_SUCCESSFULLY")
-        let succesTitle = String(localized: "COMMENT_BOOKED_SUCCESFULLY").capitalized
-        let errorTitle = String(localized: "COMMENT_BOOKED_ERROR").capitalized
-        let noRentTitle = String(localized: "COMMENT_BOOKED_NO_RENT").capitalized
-        let noti = UIAlertController(title: title, message: succesTitle.capitalized, preferredStyle: .alert)
-        let alert = UIAlertController(title: "OH NO!", message: noRentTitle.capitalized, preferredStyle: .alert)
-        let error = UIAlertController(title: "ERROR", message: errorTitle.capitalized, preferredStyle: .alert)
+        let succesTitle = String(localized: "COMMENT_BOOKED_SUCCESFULLY")
+        let errorTitle = String(localized: "COMMENT_BOOKED_ERROR")
+        let noRentTitle = String(localized: "COMMENT_BOOKED_NO_RENT")
+        let noti = UIAlertController(title: title, message: succesTitle, preferredStyle: .alert)
+        let alert = UIAlertController(title: "OH NO!", message: noRentTitle, preferredStyle: .alert)
         
         if bookViewModel.isAvailable() {
             noti.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
@@ -79,12 +78,6 @@ class BookInfoViewController: UIViewController {
             }))
             self.present(alert, animated: true, completion: nil)
         }
-/*       else {
-            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-            }))
-            self.present(error, animated: true, completion: nil)
-        }*/
     }
     
     func setupData(library: Library?) {

@@ -11,7 +11,7 @@
 		68F1B45A9A4C552D34AD4935 /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563A41DF0118F100D50930A0 /* Pods_WBooks_WBooksUITests.framework */; };
 		74BF286FA7B2DDCCD3EC1DF9 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4351B3E608AB15A0F6CD0D66 /* Pods_WBooks.framework */; };
 		D3014EEE290059140037DB40 /* RentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3014EED290059140037DB40 /* RentalsViewController.swift */; };
-		D3014EF229005BFB0037DB40 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3014EF129005BFB0037DB40 /* UITextFieldExtension.swift */; };
+		D3014EF229005BFB0037DB40 /* InputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3014EF129005BFB0037DB40 /* InputFields.swift */; };
 		D3077C0228F870A100D654D3 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3077C0128F870A100D654D3 /* Users.swift */; };
 		D31275B428DA51310007F183 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31275B328DA51310007F183 /* LibraryTableViewCell.swift */; };
 		D31275B828DA52C30007F183 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31275B728DA52C30007F183 /* Library.swift */; };
@@ -98,7 +98,7 @@
 		A87BDEFF4493B8EF15C5BD7F /* Pods-WBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.release.xcconfig"; path = "../Desktop/WBooks/Pods/Target Support Files/Pods-WBooksTests/Pods-WBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF7373369B526A41B785531C /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "../Desktop/WBooks/Pods/Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3014EED290059140037DB40 /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
-		D3014EF129005BFB0037DB40 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		D3014EF129005BFB0037DB40 /* InputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFields.swift; sourceTree = "<group>"; };
 		D3077C0128F870A100D654D3 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		D31275B328DA51310007F183 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		D31275B728DA52C30007F183 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
@@ -241,6 +241,7 @@
 				D37F17FF28F70DDC0056A259 /* Reviewer.swift */,
 				D3077C0128F870A100D654D3 /* Users.swift */,
 				D31275B728DA52C30007F183 /* Library.swift */,
+				D31BED2C28FEF2D3006370A3 /* AddNewBook.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,10 +277,10 @@
 			isa = PBXGroup;
 			children = (
 				D32F778128E4D4DB003130A8 /* AddNewView.xib */,
+				D3014EF129005BFB0037DB40 /* InputFields.swift */,
 				D32F778328E4D4E7003130A8 /* AddNewView.swift */,
 				D32F778528E4D4F7003130A8 /* AddNewController.swift */,
 				D31BED2828FEDAF9006370A3 /* AddNewViewModel.swift */,
-				D31BED2C28FEF2D3006370A3 /* AddNewBook.swift */,
 			);
 			path = AddNew;
 			sourceTree = "<group>";
@@ -302,7 +303,6 @@
 				D3995EF528FDC586004ABB5C /* UIViewExtension.swift */,
 				D3995EF328FDC31D004ABB5C /* UIViewControllerExtension.swift */,
 				D359B46B28E4FF2900FB12F6 /* UITableViewExtension.swift */,
-				D3014EF129005BFB0037DB40 /* UITextFieldExtension.swift */,
 				D3995EEF28FDC26A004ABB5C /* UIButtonExtension.swift */,
 				D3995EF128FDC2BA004ABB5C /* UIColorExtension.swift */,
 				D3995EF928FDD419004ABB5C /* UIImageExtension.swift */,
@@ -708,7 +708,7 @@
 				D386342128E74FA80063F5FC /* DetailsViewController.swift in Sources */,
 				D31275B428DA51310007F183 /* LibraryTableViewCell.swift in Sources */,
 				D38D693228D8B7CF0037B1B4 /* AppDelegate.swift in Sources */,
-				D3014EF229005BFB0037DB40 /* UITextFieldExtension.swift in Sources */,
+				D3014EF229005BFB0037DB40 /* InputFields.swift in Sources */,
 				D31BED2D28FEF2D3006370A3 /* AddNewBook.swift in Sources */,
 				D3995EF028FDC26A004ABB5C /* UIButtonExtension.swift in Sources */,
 				D398C67D28E3778D0025DE95 /* NibView.swift in Sources */,

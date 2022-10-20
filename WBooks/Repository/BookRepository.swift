@@ -48,7 +48,7 @@ class BookRepository {
         }
     }
     
-    func fetchPost(id: Int, onSuccess: @escaping (Post) -> Void, onError: @escaping (Error) -> Void) {
+    func fetchPost(id: Int, onSuccess: @escaping (Users) -> Void, onError: @escaping (Error) -> Void) {
         let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/rents")!
         let dictionary = ["book_id": id]
         AF.request(url, method: .post, parameters: dictionary).responseJSON { response in
@@ -59,7 +59,7 @@ class BookRepository {
                     onError(BookError.decodeError)
                     return
                 }
-                guard let rent = try? JSONDecoder().decode(Post.self, from: JSONbooks) else {
+                guard let rent = try? JSONDecoder().decode(Users.self, from: JSONbooks) else {
                     onError(BookError.decodeError)
                     return
                 }
@@ -70,9 +70,9 @@ class BookRepository {
         }
     }
     
-    func fetchPostAddNew(onSuccess: @escaping (Post) -> Void, onError: @escaping (Error) -> Void) {
+    func fetchPostAddNew(request: AddNewBook, onSuccess: @escaping (Library) -> Void, onError: @escaping (Error) -> Void) {
         let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/books")!
-        AF.request(url, method: .post).responseJSON { response in
+        AF.request(url, method: .post, parameters: request).responseJSON { response in
             switch response.result {
             case .success(let value):
                 print(value)
@@ -80,7 +80,7 @@ class BookRepository {
                     onError(BookError.decodeError)
                     return
                 }
-                guard let books = try? JSONDecoder().decode(Post.self, from: JSONbooks) else {
+                guard let books = try? JSONDecoder().decode(Library.self, from: JSONbooks) else {
                     onError(BookError.decodeError)
                     return
                 }

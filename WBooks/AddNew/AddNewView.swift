@@ -26,66 +26,36 @@ final class AddNewView: NibView {
         }
     }
     @IBOutlet weak var addButtonImage: UIButton!
-    @IBOutlet var titleBook: UITextField! {
+    @IBOutlet var titleBook: InputFields! {
         didSet {
             titleBook.placeholder = String(localized: "TITLE_BOOK").capitalized
-            editTexts(object: titleBook)
         }
     }
-    @IBOutlet var oneSingleLine: UIView! {
-        didSet {
-            editLines(object: oneSingleLine)
-        }
-    }
-    @IBOutlet var authorBook: UITextField! {
+    @IBOutlet var authorBook: InputFields! {
         didSet {
             authorBook.placeholder = String(localized: "AUTHOR_BOOK").capitalized
-            editTexts(object: authorBook)
         }
     }
-    @IBOutlet var twoSingleLine: UIView! {
-        didSet {
-            editLines(object: twoSingleLine)
-        }
-    }
-    @IBOutlet var yearBook: UITextField! {
+    @IBOutlet var yearBook: InputFields! {
         didSet {
             yearBook.placeholder = String(localized: "YEAR_BOOK").capitalized
-            editTexts(object: yearBook)
         }
     }
-    
-    @IBOutlet var threeSingleLine: UIView! {
-        didSet {
-            editLines(object: threeSingleLine)
-        }
-    }
-    @IBOutlet var genreBook: UITextField! {
+    @IBOutlet var genreBook: InputFields! {
         didSet {
             genreBook.placeholder = String(localized: "GENRE_BOOK").capitalized
-            editTexts(object: genreBook)
         }
     }
-    @IBOutlet var fourSingleLine: UIView! {
-        didSet {
-            editLines(object: fourSingleLine)
-        }
-    }
-    @IBOutlet var descriptionBook: UITextField! {
+    @IBOutlet var descriptionBook: InputFields! {
         didSet {
             descriptionBook.placeholder = String(localized: "DESCRIPTION_BOOK").capitalized
-            editTexts(object: descriptionBook)
-        }
-    }
-    @IBOutlet var fiveSingleLine: UIView! {
-        didSet {
-            editLines(object: fiveSingleLine)
         }
     }
     @IBOutlet var submitButton: UIButton! {
         didSet {
             submitButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
             submitButton.setAttributedTitle(NSAttributedString(string: String(localized: "SUBMIT_BUTTON_TEXT")), for: UIControl.State())
+            
         }
     }
     
