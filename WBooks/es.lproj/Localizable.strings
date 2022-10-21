@@ -24,7 +24,7 @@
 "COMMENT_BOOKED_SUCCESSFULLY" = "Reservo el libro con exito";
 "COMMENT_BOOKED_ERROR" = "El libro no esta disponible :(";
 "COMMENT_BOOKED_ERROR" = "Ha ocurrido un problema";
-"ALERT_BOOKED_SUCCESFULLY" = "RENTA EXITOSA!";
+"ALERT_BOOKED_SUCCESFULLY" = "¡RENTA EXITOSA!";
 "ALERT_GALLERY" = "Galeria";
 "ALERT_CANCEL" = "Cancelar";
 "ALERT_CAMERA" = "Camara";

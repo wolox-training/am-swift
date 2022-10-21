@@ -24,7 +24,7 @@ extension UIButton {
         self.contentVerticalAlignment = .center
         self.setTitleColor(textColor, for: .normal)
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
-        self.titleLabel?.textColor = UIColor.white
+        self.titleLabel?.textColor = .white
     }
     
 }

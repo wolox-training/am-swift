@@ -14,6 +14,11 @@ class AddNewViewModel {
     var addNewBook: AddNewBook?
     private let bookRepository: BookRepository
     var changeList: (() -> Void)?
+    var titleBook: String = ""
+    var authorBook: String = ""
+    var genreBook: String = ""
+    var yearBook: String = ""
+    var descriptionBook: String = ""
     
     init(bookRepository: BookRepository = BookRepository()) {
         self.bookRepository = bookRepository
@@ -33,6 +38,10 @@ class AddNewViewModel {
     
     func setContent(title: String, author: String, genre: String, year: String, photo: String) {
         addNewBook = AddNewBook(title: title, author: author, genre: genre, year: year, photo: photo)
+    }
+    
+    func verifyTexts() -> Bool {
+        return !(titleBook.isEmpty || authorBook.isEmpty || genreBook.isEmpty || yearBook.isEmpty || descriptionBook.isEmpty)
     }
     
 }

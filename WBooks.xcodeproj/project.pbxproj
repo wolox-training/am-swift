@@ -277,10 +277,10 @@
 			isa = PBXGroup;
 			children = (
 				D32F778128E4D4DB003130A8 /* AddNewView.xib */,
-				D3014EF129005BFB0037DB40 /* InputFields.swift */,
 				D32F778328E4D4E7003130A8 /* AddNewView.swift */,
 				D32F778528E4D4F7003130A8 /* AddNewController.swift */,
 				D31BED2828FEDAF9006370A3 /* AddNewViewModel.swift */,
+				D3014EF129005BFB0037DB40 /* InputFields.swift */,
 			);
 			path = AddNew;
 			sourceTree = "<group>";

@@ -7,6 +7,8 @@
 
 class LoginViewModel {
     
+    var username: String = ""
+    var password: String = ""
     func pulsacion() {
         debugPrint ("Boton pulsado")
     }
@@ -14,5 +16,5 @@ class LoginViewModel {
     func createViewModelLibrary() -> LibraryTableViewModel {
         return LibraryTableViewModel()
     }
-    
+
 }

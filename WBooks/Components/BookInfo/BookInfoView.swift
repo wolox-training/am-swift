@@ -46,7 +46,7 @@ final class BookInfoView: NibView {
     }
     @IBOutlet var addButton: UIButton! {
         didSet {
-            addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+            addButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
             addButton.setAttributedTitle(NSAttributedString(string: String(localized: "ADD_TO_WISHLIST_BUTTON")), for: UIControl.State())
             addButton.layer.borderWidth = 2
             addButton.layer.borderColor = UIColor.summerSky.cgColor

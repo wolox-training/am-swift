@@ -11,11 +11,9 @@ class RentalsViewController: UIViewController {
 
     private lazy var rentalsView = RentalsView()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("TITLE_VIEW_RENTALS", comment: "")
-       
     }
     
     override func loadView() {

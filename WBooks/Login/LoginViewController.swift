@@ -10,10 +10,10 @@ import UIKit
 class LoginViewController: UIViewController {
 
     private lazy var loginView = LoginView()
-    private let viewModel: LoginViewModel
+    private let loginViewModel: LoginViewModel
     
-    init(viewModel: LoginViewModel) {
-        self.viewModel = viewModel
+    init(loginViewModel: LoginViewModel) {
+        self.loginViewModel = loginViewModel
         super.init(nibName: nil, bundle: nil)
     }
     

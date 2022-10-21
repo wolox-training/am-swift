@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func navigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
+        let color = UIColor.white
         appearance.backgroundColor =  .summerSky
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [.foregroundColor: color]
+        appearance.largeTitleTextAttributes = [.foregroundColor: color]
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
