@@ -17,4 +17,8 @@ class LoginViewModel {
         return LibraryTableViewModel()
     }
 
+    func verifyTexts() -> Bool {
+        return !(username.isEmpty || password.isEmpty)
+    }
+    
 }

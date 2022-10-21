@@ -48,4 +48,5 @@ open class InputFields: UITextField, UITextFieldDelegate {
         super.init(coder: coder)
         setUpFormat(color: UIColor.gainsboro.cgColor)
     }
+    
 }
