@@ -9,12 +9,12 @@ import UIKit
 
 final class LoginView: NibView {
     
-    @IBOutlet weak var usernameTextField: UITextField! {
+    @IBOutlet weak var usernameTextField: LoginTextField! {
         didSet {
             usernameTextField.textColor = .gray
         }
     }
-    @IBOutlet weak var passwordTextField: UITextField! {
+    @IBOutlet weak var passwordTextField: LoginTextField! {
         didSet {
             passwordTextField.textColor = .gray
         }

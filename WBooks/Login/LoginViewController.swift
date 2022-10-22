@@ -24,12 +24,18 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.signinButton.addTarget(self, action:#selector(signinButtonAction), for: .touchUpInside)
+        textFieldDelegate()
     }
     
     override func loadView() {
         view = loginView
     }
-
+    
+    func textFieldDelegate() {
+        loginView.usernameTextField.delegate = self
+        loginView.passwordTextField.delegate = self
+    }
+    
     //MARK: Action
     
     @objc func signinButtonAction() {
