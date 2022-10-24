@@ -10,10 +10,10 @@ import UIKit
 class LoginViewController: UIViewController {
 
     private lazy var loginView = LoginView()
-    private let viewModel: LoginViewModel
+    private let loginViewModel: LoginViewModel
     
-    init(viewModel: LoginViewModel) {
-        self.viewModel = viewModel
+    init(loginViewModel: LoginViewModel) {
+        self.loginViewModel = loginViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,18 +24,54 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.signinButton.addTarget(self, action:#selector(signinButtonAction), for: .touchUpInside)
+        textFieldDelegate()
     }
     
     override func loadView() {
         view = loginView
     }
-
+    
+    func textFieldDelegate() {
+        loginView.usernameTextField.delegate = self
+        loginView.passwordTextField.delegate = self
+    }
+    
     //MARK: Action
     
     @objc func signinButtonAction() {
         let tabBar = TabBarController()
-        UIApplication.shared.windows.first?.rootViewController = tabBar
-        UIApplication.shared.windows.first?.makeKeyAndVisible()
+        let errorSubmit = String(localized: "ALERT_SUBMIT_ERROR")
+        let errorAlert = UIAlertController(title: "¡ERROR!", message: errorSubmit, preferredStyle: .alert)
+        if loginViewModel.verifyTexts() {
+            UIApplication.shared.windows.first?.rootViewController = tabBar
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
+        else {
+            debugPrint(errorAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            })))
+            self.present(errorAlert, animated: true, completion: nil)
+        }
+       
+    }
+    
+}
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let customTextField = textField as? LoginTextField else {
+            return true
+        }
+        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        switch textField {
+        case loginView.usernameTextField:
+            loginViewModel.username = text
+        case loginView.passwordTextField:
+            loginViewModel.password = text
+        default:
+            break
+        }
+        return true
     }
     
 }

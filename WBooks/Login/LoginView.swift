@@ -9,12 +9,12 @@ import UIKit
 
 final class LoginView: NibView {
     
-    @IBOutlet weak var usernameTextField: UITextField! {
+    @IBOutlet weak var usernameTextField: LoginTextField! {
         didSet {
             usernameTextField.textColor = .gray
         }
     }
-    @IBOutlet weak var passwordTextField: UITextField! {
+    @IBOutlet weak var passwordTextField: LoginTextField! {
         didSet {
             passwordTextField.textColor = .gray
         }
@@ -31,8 +31,11 @@ final class LoginView: NibView {
     }
     @IBOutlet var signinButton: UIButton! {
         didSet {
+            signinButton.setTitleColor(.summerSky, for: .normal)
+            signinButton.backgroundColor = .white
+            signinButton.titleLabel?.font = .boldSystemFont(ofSize: 16.0)
             signinButton.setTitle(NSLocalizedString("SIGN_IN_BUTTON", comment: ""), for: .normal)
-            signinButton.tintColor = .summerSky
+            signinButton.layer.cornerRadius = 27
         }
     }
     

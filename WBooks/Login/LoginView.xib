@@ -11,9 +11,9 @@
             <connections>
                 <outlet property="backgroundImage" destination="0Cf-6h-v1q" id="af5-pV-aTT"/>
                 <outlet property="iconImage" destination="3hX-oM-ebC" id="QSQ-d4-ds4"/>
-                <outlet property="passwordTextField" destination="BnA-df-iyC" id="phu-Wr-1NC"/>
+                <outlet property="passwordTextField" destination="BnA-df-iyC" id="onU-AY-eV3"/>
                 <outlet property="signinButton" destination="6la-wz-0gZ" id="Yak-Bx-ilb"/>
-                <outlet property="usernameTextField" destination="Mry-hR-UWo" id="leu-j0-4Pa"/>
+                <outlet property="usernameTextField" destination="Mry-hR-UWo" id="8Li-Yq-eDP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,7 +31,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-H5-779">
                             <rect key="frame" x="36" y="244" width="307" height="196"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-hR-UWo">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-hR-UWo" customClass="LoginTextField" customModule="WBooks" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="307" height="52"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <constraints>
@@ -40,7 +40,7 @@
                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" textContentType="username"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="BnA-df-iyC">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="BnA-df-iyC" customClass="LoginTextField" customModule="WBooks" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="72" width="307" height="52"/>
                                     <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <constraints>
@@ -54,17 +54,21 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="LKg-Hp-Vsb"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="SIGN IN" buttonSize="medium" titleAlignment="center">
-                                        <backgroundConfiguration key="background" cornerRadius="30">
-                                            <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                        </backgroundConfiguration>
-                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                    </buttonConfiguration>
                                 </button>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="6la-wz-0gZ" firstAttribute="leading" secondItem="xLI-H5-779" secondAttribute="leading" id="0Vu-Su-c60"/>
+                                <constraint firstItem="BnA-df-iyC" firstAttribute="leading" secondItem="xLI-H5-779" secondAttribute="leading" id="2eS-7k-QRT"/>
+                                <constraint firstAttribute="trailing" secondItem="BnA-df-iyC" secondAttribute="trailing" id="DWq-6t-Ruf"/>
                                 <constraint firstAttribute="height" constant="196" id="GbW-CP-xCj"/>
+                                <constraint firstItem="BnA-df-iyC" firstAttribute="top" secondItem="Mry-hR-UWo" secondAttribute="bottom" constant="20" id="QqX-KV-cBw"/>
+                                <constraint firstItem="Mry-hR-UWo" firstAttribute="leading" secondItem="xLI-H5-779" secondAttribute="leading" id="Uc1-qP-DUq"/>
+                                <constraint firstAttribute="trailing" secondItem="Mry-hR-UWo" secondAttribute="trailing" id="d6i-ZU-m1H"/>
+                                <constraint firstItem="6la-wz-0gZ" firstAttribute="top" secondItem="BnA-df-iyC" secondAttribute="bottom" constant="20" id="nF2-I1-x8b"/>
+                                <constraint firstAttribute="trailing" secondItem="6la-wz-0gZ" secondAttribute="trailing" id="xxF-BQ-IMB"/>
                             </constraints>
                         </stackView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3hX-oM-ebC">
