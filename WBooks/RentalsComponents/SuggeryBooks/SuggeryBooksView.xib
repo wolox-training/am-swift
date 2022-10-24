@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuggeryBooksView" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionBooks" destination="GlN-VR-58g" id="vfb-Lx-KzW"/>
+                <outlet property="suggeryTitle" destination="44L-hJ-nqp" id="Rff-Hg-ezZ"/>
+                <outlet property="suggeryView" destination="iN0-l3-epB" id="NFo-GM-GKv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44L-hJ-nqp">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="cPK-bj-8jv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GlN-VR-58g">
+                    <rect key="frame" x="0.0" y="34" width="366" height="70"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0KE-gh-fZb">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="12" maxY="12"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="44L-hJ-nqp" secondAttribute="trailing" id="Hoq-mg-CsY"/>
+                <constraint firstItem="44L-hJ-nqp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="I1G-P4-KNy"/>
+                <constraint firstItem="GlN-VR-58g" firstAttribute="leading" secondItem="44L-hJ-nqp" secondAttribute="leading" id="PBy-Kj-NaV"/>
+                <constraint firstItem="44L-hJ-nqp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kRx-dZ-dRP"/>
+                <constraint firstItem="GlN-VR-58g" firstAttribute="trailing" secondItem="44L-hJ-nqp" secondAttribute="trailing" id="r2D-Mn-PpR"/>
+                <constraint firstItem="GlN-VR-58g" firstAttribute="top" secondItem="44L-hJ-nqp" secondAttribute="bottom" constant="15" id="uhg-7Q-HD1"/>
+                <constraint firstAttribute="bottom" secondItem="GlN-VR-58g" secondAttribute="bottom" id="z73-Sd-NjX"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="96.92307692307692" y="24.881516587677723"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

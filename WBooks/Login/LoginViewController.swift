@@ -47,12 +47,11 @@ class LoginViewController: UIViewController {
             UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
         else {
-            debugPrint(errorAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-            })))
+            errorAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                debugPrint("The \"OK\" alert occured.")
+            }))
             self.present(errorAlert, animated: true, completion: nil)
         }
-       
     }
     
 }

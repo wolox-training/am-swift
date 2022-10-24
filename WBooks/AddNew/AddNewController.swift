@@ -81,9 +81,9 @@ class AddNewController: UIViewController {
         let errorAlert = UIAlertController(title: "¡ERROR!", message: errorSubmit, preferredStyle: .alert)
         verifyColor()
         if addNewViewModel.verifyTexts() {
-            debugPrint(successAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-            })))
+            successAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                debugPrint("The \"OK\" alert occured.")
+            }))
             self.present(successAlert, animated: true, completion: nil)
             addNewViewModel.setContent(title: addNewView.titleBook.text ?? "",
                                        author: addNewView.authorBook.text ?? "",
@@ -94,9 +94,9 @@ class AddNewController: UIViewController {
             }
         }
         else {
-            debugPrint(errorAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-            })))
+            errorAlert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                debugPrint("The \"OK\" alert occured.")
+            }))
             self.present(errorAlert, animated: true, completion: nil)
         }
     }

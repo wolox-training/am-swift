@@ -5,9 +5,6 @@
 //  Created by ana.mancuso on 18/10/2022.
 //
 
-import UIKit
-import os.log
-
 struct AddNewBook: Codable {
     
     var title: String
@@ -15,4 +12,5 @@ struct AddNewBook: Codable {
     var genre: String
     var year: String
     var photo: String
+    
 }

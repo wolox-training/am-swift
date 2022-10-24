@@ -11,8 +11,17 @@ final class RentalsView: NibView {
     
     @IBOutlet var rentalsView: UIView! {
         didSet {
-            rentalsView.backgroundColor = .white
+            rentalsView.backgroundColor = .aliceBlue
         }
     }
-
+    @IBOutlet weak var headerTableView: UIView! {
+        didSet {
+            headerTableView.backgroundColor = .clear
+        }
+    }
+    @IBOutlet weak var suggeryBooksView: UIView! {
+        didSet {
+            suggeryBooksView.backgroundColor = .clear
+        }
+    }
 }

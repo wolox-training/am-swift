@@ -20,7 +20,7 @@ class LibraryTableViewCell: UITableViewCell {
     }
     @IBOutlet weak var nameBookLabel: UILabel!
     @IBOutlet weak var photoBookView: UIImageView!
-    @IBOutlet weak var autorBookName: UILabel!
+    @IBOutlet weak var authorBookName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,7 +34,7 @@ class LibraryTableViewCell: UITableViewCell {
     
     func setupData(library: Library?) {
         nameBookLabel.text = library?.name
-        autorBookName.text = library?.name2
+        authorBookName.text = library?.name2
         photoBookView?.downloaded(from: library?.photo ?? "")
     }
     

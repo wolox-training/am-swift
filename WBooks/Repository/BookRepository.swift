@@ -90,6 +90,47 @@ class BookRepository {
             }
         }
     }
+    
+    func fetchRentsBooks(onSuccess: @escaping ([Rents]) -> Void, onError: @escaping (Error) -> Void) {
+        let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/rents")!
+        AF.request(url, method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                guard let rentsBooks = try? JSONDecoder().decode([Rents].self, from: JSONbooks) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                onSuccess(rentsBooks)
+            case .failure(let error):
+                onError(error)
+            }
+        }
+    }
+    
+    func fetchSuggeryBooks(onSuccess: @escaping ([Library]) -> Void, onError: @escaping (Error) -> Void) {
+        let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/suggestions")!
+        AF.request(url, method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                guard let suggeryBooks = try? JSONDecoder().decode([Library].self, from: JSONbooks) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                onSuccess(suggeryBooks)
+            case .failure(let error):
+                onError(error)
+            }
+        }
+    }
+    
 }
 
 enum BookError: Error {
