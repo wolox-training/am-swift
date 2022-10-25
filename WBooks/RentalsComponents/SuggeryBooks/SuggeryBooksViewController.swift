@@ -8,8 +8,6 @@
 import UIKit
 
 class SuggeryBooksViewController: UIViewController {
-
-    
     
     private lazy var suggeryBooksView = SuggeryBooksView()
     private let suggeryBooksViewModel: SuggeryBooksViewModel
@@ -48,12 +46,10 @@ extension SuggeryBooksViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return suggeryBooksViewModel.library.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SuggeryCollectionViewCell.cellIdentifier, for: indexPath) as! SuggeryCollectionViewCell
-    
         cell.setupBookImage(library: suggeryBooksViewModel.library[indexPath.row])
-    
         return cell
     }
     

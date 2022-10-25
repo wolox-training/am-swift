@@ -49,4 +49,5 @@ class RentalsViewController: UIViewController {
         parentView.addSubViewWithConstraints(child: controller.view, parent: parentView)
         controller.didMove(toParent: self)
     }
+    
 }

@@ -10,6 +10,7 @@ import UIKit
 class SuggeryCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "SuggeryCollectionViewCell"
+    static let nib = UINib(nibName: "SuggeryCollectionViewCell", bundle: nil)
     
     @IBOutlet weak var imageBook: UIImageView! {
         didSet {

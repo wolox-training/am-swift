@@ -23,8 +23,7 @@ final class SuggeryBooksView: NibView {
     @IBOutlet weak var collectionBooks: UICollectionView! {
         didSet {
             collectionBooks.backgroundColor = .clear
-            let nib = UINib(nibName: "SuggeryCollectionViewCell", bundle: nil)
-            collectionBooks.register(nib, forCellWithReuseIdentifier: "SuggeryCollectionViewCell")
+            collectionBooks.register(SuggeryCollectionViewCell.nib, forCellWithReuseIdentifier: SuggeryCollectionViewCell.cellIdentifier)
         }
     }
     

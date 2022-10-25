@@ -17,11 +17,11 @@ class SuggeryBooksViewModel {
     }
     
     func loadSampleLibrarys(action: @escaping () -> ()) {
-        bookRepository.fetchSuggeryBooks { [weak self] listaDeLibros in
+        bookRepository.fetchSuggeryBooks { [weak self] bookList in
             guard let self = self else {
                 return
             }
-            self.library = listaDeLibros
+            self.library = bookList
             action()
         } onError: { errorLista in
             debugPrint(errorLista.localizedDescription)

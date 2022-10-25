@@ -45,10 +45,6 @@ extension RentalsTableViewController: UITableViewDelegate, UITableViewDataSource
     
     // MARK: - Table view data source
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rentalsTableViewModel.rents.count
     }
@@ -60,10 +56,6 @@ extension RentalsTableViewController: UITableViewDelegate, UITableViewDataSource
         cell.setupRentsBooks(rents: rentalsTableViewModel.rents[indexPath.row])
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

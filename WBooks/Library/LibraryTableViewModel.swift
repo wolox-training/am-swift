@@ -18,11 +18,11 @@ class LibraryTableViewModel {
     }
     
     func loadSampleLibrarys() {
-        bookRepository.fetchBooks { [weak self] listaDeLibros in
+        bookRepository.fetchBooks { [weak self] bookList in
             guard let selfAux = self else {
                 return
             }
-            selfAux.library = listaDeLibros
+            selfAux.library = bookList
             selfAux.changeList?()
         } onError: { errorLista in
             debugPrint(errorLista.localizedDescription)
