@@ -19,6 +19,15 @@ struct Library: Decodable {
     
     //    MARK: Initialization
         
+    init(id: Int, name: String, name2: String, genre: String, year: String, status: String, photo: String) {
+        self.id = id
+        self.name = name
+        self.name2 = name2
+        self.genre = genre
+        self.year = year
+        self.status = status
+        self.photo = photo
+    }
         init(from: Decoder) {
             let container = try! from.container(keyedBy: BookKey.self)
             id = try! container.decode(Int.self, forKey: .id)
