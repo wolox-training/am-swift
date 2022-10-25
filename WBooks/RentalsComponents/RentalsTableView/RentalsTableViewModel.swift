@@ -1,15 +1,15 @@
 //
-//  LibraryTableViewModel.swift
+//  RentalsTableViewModel.swift
 //  WBooks
 //
-//  Created by ana.mancuso on 28/09/2022.
+//  Created by ana.mancuso on 22/10/2022.
 //
 
 import UIKit
 
-class LibraryTableViewModel {
+class RentalsTableViewModel {
     
-    var library = [Library]()
+    var rents = [Rents]()
     private let bookRepository: BookRepository
     var changeList: (() -> Void)?
     
@@ -18,12 +18,12 @@ class LibraryTableViewModel {
     }
     
     func loadSampleLibrarys() {
-        bookRepository.fetchBooks { [weak self] bookList in
-            guard let selfAux = self else {
+        bookRepository.fetchRentsBooks { [weak self] rentsBooks in
+            guard let self = self else {
                 return
             }
-            selfAux.library = bookList
-            selfAux.changeList?()
+            self.rents = rentsBooks
+            self.changeList?()
         } onError: { errorLista in
             debugPrint(errorLista.localizedDescription)
         }

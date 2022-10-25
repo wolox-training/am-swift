@@ -28,7 +28,21 @@
 		D32F778628E4D4F7003130A8 /* AddNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F778528E4D4F7003130A8 /* AddNewController.swift */; };
 		D32F778828E4D53D003130A8 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32F778728E4D53D003130A8 /* RentalsView.xib */; };
 		D32F778A28E4D579003130A8 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F778928E4D579003130A8 /* RentalsView.swift */; };
+		D337AE562906CD4600389AEC /* Rents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D337AE552906CD4500389AEC /* Rents.swift */; };
+		D337AE592906D32B00389AEC /* RentalsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D337AE582906D32B00389AEC /* RentalsTableViewCell.xib */; };
+		D337AE5B2906D33C00389AEC /* RentalsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D337AE5A2906D33C00389AEC /* RentalsTableViewCell.swift */; };
+		D337AE5D2906D9A300389AEC /* SuggeryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D337AE5C2906D9A300389AEC /* SuggeryCollectionViewCell.swift */; };
+		D337AE602906D9D600389AEC /* SuggeryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D337AE5F2906D9D600389AEC /* SuggeryCollectionViewCell.xib */; };
 		D359B46C28E4FF2900FB12F6 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359B46B28E4FF2900FB12F6 /* UITableViewExtension.swift */; };
+		D36210352904BA1900BB15D9 /* RentalsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36210342904BA1900BB15D9 /* RentalsTableView.xib */; };
+		D36210382904BA7700BB15D9 /* RentalsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36210372904BA7700BB15D9 /* RentalsTableView.swift */; };
+		D362103A2904BA8B00BB15D9 /* RentalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36210392904BA8B00BB15D9 /* RentalsTableViewController.swift */; };
+		D362103C2904BAA400BB15D9 /* RentalsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362103B2904BAA400BB15D9 /* RentalsTableViewModel.swift */; };
+		D362103F2904BDDA00BB15D9 /* SuggeryBooksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D362103E2904BDDA00BB15D9 /* SuggeryBooksView.xib */; };
+		D36210412904BDF400BB15D9 /* SuggeryBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36210402904BDF400BB15D9 /* SuggeryBooksView.swift */; };
+		D36210432904BE0300BB15D9 /* SuggeryBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36210422904BE0300BB15D9 /* SuggeryBooksViewController.swift */; };
+		D36210462904BE1F00BB15D9 /* SuggeryBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36210452904BE1F00BB15D9 /* SuggeryBooksViewModel.swift */; };
+		D362104A2904C1E700BB15D9 /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36210492904C1E700BB15D9 /* RentalsViewModel.swift */; };
 		D37F17F728F6FBF80056A259 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F17F628F6FBF80056A259 /* Post.swift */; };
 		D37F17FC28F70AAF0056A259 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D37F17FB28F70AAF0056A259 /* ReviewTableViewCell.xib */; };
 		D37F17FE28F70AC80056A259 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37F17FD28F70AC80056A259 /* ReviewTableViewCell.swift */; };
@@ -116,7 +130,21 @@
 		D32F778528E4D4F7003130A8 /* AddNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewController.swift; sourceTree = "<group>"; };
 		D32F778728E4D53D003130A8 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
 		D32F778928E4D579003130A8 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
+		D337AE552906CD4500389AEC /* Rents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rents.swift; sourceTree = "<group>"; };
+		D337AE582906D32B00389AEC /* RentalsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsTableViewCell.xib; sourceTree = "<group>"; };
+		D337AE5A2906D33C00389AEC /* RentalsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsTableViewCell.swift; sourceTree = "<group>"; };
+		D337AE5C2906D9A300389AEC /* SuggeryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggeryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D337AE5F2906D9D600389AEC /* SuggeryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggeryCollectionViewCell.xib; sourceTree = "<group>"; };
 		D359B46B28E4FF2900FB12F6 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		D36210342904BA1900BB15D9 /* RentalsTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsTableView.xib; sourceTree = "<group>"; };
+		D36210372904BA7700BB15D9 /* RentalsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsTableView.swift; sourceTree = "<group>"; };
+		D36210392904BA8B00BB15D9 /* RentalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsTableViewController.swift; sourceTree = "<group>"; };
+		D362103B2904BAA400BB15D9 /* RentalsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsTableViewModel.swift; sourceTree = "<group>"; };
+		D362103E2904BDDA00BB15D9 /* SuggeryBooksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggeryBooksView.xib; sourceTree = "<group>"; };
+		D36210402904BDF400BB15D9 /* SuggeryBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggeryBooksView.swift; sourceTree = "<group>"; };
+		D36210422904BE0300BB15D9 /* SuggeryBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggeryBooksViewController.swift; sourceTree = "<group>"; };
+		D36210452904BE1F00BB15D9 /* SuggeryBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggeryBooksViewModel.swift; sourceTree = "<group>"; };
+		D36210492904C1E700BB15D9 /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
 		D37F17F628F6FBF80056A259 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D37F17FB28F70AAF0056A259 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		D37F17FD28F70AC80056A259 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -228,13 +256,13 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		D3014EF4290086280037DB40 /* Components */ = {
+		D3014EF4290086280037DB40 /* DetailsComponents */ = {
 			isa = PBXGroup;
 			children = (
 				D3995EDB28FD9508004ABB5C /* BookInfo */,
 				D3995EE828FDAF1F004ABB5C /* ReviewTable */,
 			);
-			path = Components;
+			path = DetailsComponents;
 			sourceTree = "<group>";
 		};
 		D3014EF5290087000037DB40 /* Models */ = {
@@ -243,7 +271,9 @@
 				D37F17FF28F70DDC0056A259 /* Reviewer.swift */,
 				D3077C0128F870A100D654D3 /* Users.swift */,
 				D31275B728DA52C30007F183 /* Library.swift */,
+				D37F17F628F6FBF80056A259 /* Post.swift */,
 				D31BED2C28FEF2D3006370A3 /* AddNewBook.swift */,
+				D337AE552906CD4500389AEC /* Rents.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,9 +323,27 @@
 				D32F778728E4D53D003130A8 /* RentalsView.xib */,
 				D32F778928E4D579003130A8 /* RentalsView.swift */,
 				D3014EED290059140037DB40 /* RentalsViewController.swift */,
-				D37F17F628F6FBF80056A259 /* Post.swift */,
+				D36210492904C1E700BB15D9 /* RentalsViewModel.swift */,
 			);
 			path = Rentals;
+			sourceTree = "<group>";
+		};
+		D337AE572906D2FA00389AEC /* RentalsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D337AE582906D32B00389AEC /* RentalsTableViewCell.xib */,
+				D337AE5A2906D33C00389AEC /* RentalsTableViewCell.swift */,
+			);
+			path = RentalsTableViewCell;
+			sourceTree = "<group>";
+		};
+		D337AE5E2906D9B900389AEC /* SuggeryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D337AE5F2906D9D600389AEC /* SuggeryCollectionViewCell.xib */,
+				D337AE5C2906D9A300389AEC /* SuggeryCollectionViewCell.swift */,
+			);
+			path = SuggeryCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		D359B46A28E4FF0F00FB12F6 /* Extensions */ = {
@@ -310,6 +358,39 @@
 				D3995EF928FDD419004ABB5C /* UIImageExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D36210332904B9FD00BB15D9 /* RentalsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D36210342904BA1900BB15D9 /* RentalsTableView.xib */,
+				D36210372904BA7700BB15D9 /* RentalsTableView.swift */,
+				D36210392904BA8B00BB15D9 /* RentalsTableViewController.swift */,
+				D362103B2904BAA400BB15D9 /* RentalsTableViewModel.swift */,
+				D337AE572906D2FA00389AEC /* RentalsTableViewCell */,
+			);
+			path = RentalsTableView;
+			sourceTree = "<group>";
+		};
+		D36210362904BA3600BB15D9 /* RentalsComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D36210332904B9FD00BB15D9 /* RentalsTableView */,
+				D362103D2904BD4B00BB15D9 /* SuggeryBooks */,
+			);
+			path = RentalsComponents;
+			sourceTree = "<group>";
+		};
+		D362103D2904BD4B00BB15D9 /* SuggeryBooks */ = {
+			isa = PBXGroup;
+			children = (
+				D362103E2904BDDA00BB15D9 /* SuggeryBooksView.xib */,
+				D36210402904BDF400BB15D9 /* SuggeryBooksView.swift */,
+				D36210422904BE0300BB15D9 /* SuggeryBooksViewController.swift */,
+				D36210452904BE1F00BB15D9 /* SuggeryBooksViewModel.swift */,
+				D337AE5E2906D9B900389AEC /* SuggeryCollectionViewCell */,
+			);
+			path = SuggeryBooks;
 			sourceTree = "<group>";
 		};
 		D37F17FA28F70A6C0056A259 /* ReviewCell */ = {
@@ -364,10 +445,11 @@
 				D398C67428E376690025DE95 /* Login */,
 				D398C68128E37AAA0025DE95 /* Library */,
 				D386341B28E74F4D0063F5FC /* Details */,
-				D3014EF4290086280037DB40 /* Components */,
+				D3014EF4290086280037DB40 /* DetailsComponents */,
 				D32F777728E4D106003130A8 /* AddNew */,
 				D32F777628E4D0C4003130A8 /* WishList */,
 				D32F777828E4D117003130A8 /* Rentals */,
+				D36210362904BA3600BB15D9 /* RentalsComponents */,
 				D32F777128E4CFE9003130A8 /* Tab Bar */,
 				D38D693128D8B7CF0037B1B4 /* AppDelegate.swift */,
 				D38D693328D8B7CF0037B1B4 /* SceneDelegate.swift */,
@@ -563,11 +645,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D37F17FC28F70AAF0056A259 /* ReviewTableViewCell.xib in Resources */,
+				D337AE592906D32B00389AEC /* RentalsTableViewCell.xib in Resources */,
+				D36210352904BA1900BB15D9 /* RentalsTableView.xib in Resources */,
 				D398C68328E37AE20025DE95 /* LibraryTableView.xib in Resources */,
 				D32F776A28E49279003130A8 /* LibraryTableViewCell.xib in Resources */,
 				D38D693E28D8B7E20037B1B4 /* LaunchScreen.storyboard in Resources */,
+				D362103F2904BDDA00BB15D9 /* SuggeryBooksView.xib in Resources */,
 				D3995EEE28FDAF7E004ABB5C /* ReviewView.xib in Resources */,
 				D398C67628E376970025DE95 /* LoginView.xib in Resources */,
+				D337AE602906D9D600389AEC /* SuggeryCollectionViewCell.xib in Resources */,
 				D3995EDD28FD9532004ABB5C /* BookInfoView.xib in Resources */,
 				D32F778228E4D4DB003130A8 /* AddNewView.xib in Resources */,
 				D3929C9028DE169000F6CAE6 /* Localizable.strings in Resources */,
@@ -708,10 +794,14 @@
 				D3995EE128FD955D004ABB5C /* BookInfoViewController.swift in Sources */,
 				D31275B828DA52C30007F183 /* Library.swift in Sources */,
 				D3D09084290343DF009060F8 /* LoginTextField.swift in Sources */,
+				D337AE5B2906D33C00389AEC /* RentalsTableViewCell.swift in Sources */,
 				D386341828E745420063F5FC /* BookRepository.swift in Sources */,
 				D386342128E74FA80063F5FC /* DetailsViewController.swift in Sources */,
 				D31275B428DA51310007F183 /* LibraryTableViewCell.swift in Sources */,
+				D36210382904BA7700BB15D9 /* RentalsTableView.swift in Sources */,
 				D38D693228D8B7CF0037B1B4 /* AppDelegate.swift in Sources */,
+				D36210462904BE1F00BB15D9 /* SuggeryBooksViewModel.swift in Sources */,
+				D362103A2904BA8B00BB15D9 /* RentalsTableViewController.swift in Sources */,
 				D3014EF229005BFB0037DB40 /* InputFields.swift in Sources */,
 				D31BED2D28FEF2D3006370A3 /* AddNewBook.swift in Sources */,
 				D3995EF028FDC26A004ABB5C /* UIButtonExtension.swift in Sources */,
@@ -724,13 +814,18 @@
 				D31BED2928FEDAF9006370A3 /* AddNewViewModel.swift in Sources */,
 				D32F777028E4B531003130A8 /* LoginViewModel.swift in Sources */,
 				D3995EEC28FDAF65004ABB5C /* ReviewViewController.swift in Sources */,
+				D362104A2904C1E700BB15D9 /* RentalsViewModel.swift in Sources */,
+				D362103C2904BAA400BB15D9 /* RentalsTableViewModel.swift in Sources */,
+				D337AE5D2906D9A300389AEC /* SuggeryCollectionViewCell.swift in Sources */,
 				D3995EE728FDACFF004ABB5C /* ReviewViewModel.swift in Sources */,
 				D38D693428D8B7CF0037B1B4 /* SceneDelegate.swift in Sources */,
 				D32F777C28E4D14D003130A8 /* WishListView.swift in Sources */,
+				D337AE562906CD4600389AEC /* Rents.swift in Sources */,
 				D37F17FE28F70AC80056A259 /* ReviewTableViewCell.swift in Sources */,
 				D3995EF428FDC31D004ABB5C /* UIViewControllerExtension.swift in Sources */,
 				D3995EEA28FDAF52004ABB5C /* ReviewView.swift in Sources */,
 				D32F778628E4D4F7003130A8 /* AddNewController.swift in Sources */,
+				D36210412904BDF400BB15D9 /* SuggeryBooksView.swift in Sources */,
 				D3995EF228FDC2BA004ABB5C /* UIColorExtension.swift in Sources */,
 				D398C68528E37B480025DE95 /* LibraryTableView.swift in Sources */,
 				D3995EE328FD956F004ABB5C /* BookInfoView.swift in Sources */,
@@ -742,6 +837,7 @@
 				D3995EDF28FD9543004ABB5C /* BookInfoViewModel.swift in Sources */,
 				D32F777528E4D045003130A8 /* TabBarController.swift in Sources */,
 				D398C68028E378AF0025DE95 /* LoginViewController.swift in Sources */,
+				D36210432904BE0300BB15D9 /* SuggeryBooksViewController.swift in Sources */,
 				D37F180828F7315B0056A259 /* UIImageViewExtension.swift in Sources */,
 				D32F777E28E4D173003130A8 /* WishListController.swift in Sources */,
 				D32F778428E4D4E7003130A8 /* AddNewView.swift in Sources */,

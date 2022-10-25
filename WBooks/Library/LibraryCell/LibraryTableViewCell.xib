@@ -63,7 +63,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="autorBookName" destination="5V9-Bf-p9h" id="FBQ-ny-2U5"/>
+                <outlet property="authorBookName" destination="5V9-Bf-p9h" id="tGo-aU-SbN"/>
                 <outlet property="libraryView" destination="o6j-Cc-x6N" id="vVw-pj-z8H"/>
                 <outlet property="nameBookLabel" destination="sjF-lo-vgV" id="DaP-LL-KZS"/>
                 <outlet property="photoBookView" destination="Syh-Sg-iLP" id="aht-pf-GMD"/>

@@ -1,32 +1,32 @@
 //
-//  LibraryTableViewModel.swift
+//  SuggeryBooksViewModel.swift
 //  WBooks
 //
-//  Created by ana.mancuso on 28/09/2022.
+//  Created by ana.mancuso on 22/10/2022.
 //
 
 import UIKit
 
-class LibraryTableViewModel {
+class SuggeryBooksViewModel {
     
     var library = [Library]()
     private let bookRepository: BookRepository
-    var changeList: (() -> Void)?
     
     init(bookRepository: BookRepository = BookRepository()) {
         self.bookRepository = bookRepository
     }
     
-    func loadSampleLibrarys() {
-        bookRepository.fetchBooks { [weak self] bookList in
-            guard let selfAux = self else {
+    func loadSampleLibrarys(action: @escaping () -> ()) {
+        bookRepository.fetchSuggeryBooks { [weak self] bookList in
+            guard let self = self else {
                 return
             }
-            selfAux.library = bookList
-            selfAux.changeList?()
+            self.library = bookList
+            action()
         } onError: { errorLista in
             debugPrint(errorLista.localizedDescription)
         }
     }
     
 }
+
