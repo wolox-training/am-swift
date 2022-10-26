@@ -45,8 +45,8 @@ class DetailsViewController: UIViewController {
     
     func loadSubviews(controller: UIViewController, parentView: UIView) {
         addChild(controller)
-        detailsV.commentsView.addSubview(controller.view)
-        detailsV.commentsView.addSubViewWithConstraints(child: controller.view, parent: parentView)
+        parentView.addSubview(controller.view)
+        parentView.addSubViewWithConstraints(child: controller.view, parent: parentView)
         controller.didMove(toParent: self)
     }
 }

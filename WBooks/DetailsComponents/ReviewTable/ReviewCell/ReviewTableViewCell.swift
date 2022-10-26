@@ -16,7 +16,6 @@ class ReviewTableViewCell: UITableViewCell {
     @IBOutlet var reviewView: UIView! {
         didSet {
             reviewView.backgroundColor = .clear
-            reviewView.layer.cornerRadius = 10
             reviewView.layer.masksToBounds = false
         }
     }

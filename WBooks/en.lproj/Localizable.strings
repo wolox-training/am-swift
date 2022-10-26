@@ -22,10 +22,10 @@
 
 /* ALERT CUSTOMIZATION*/
 
-"COMMENT_BOOKED_SUCCESSFULLY" = "I booked the book successfully";
-"COMMENT_BOOKED_NO_RENT" = "The book is unavailable";
-"COMMENT_BOOKED_ERROR" = "A problem has occurred";
-"ALERT_BOOKED_SUCCESFULLY" = "¡SUCCESS!";
+"COMMENT_SUCCESSFULLY" = "I booked the book successfully";
+"COMMENT_NO_RENT" = "The book is unavailable";
+"COMMENT_ERROR" = "A problem has occurred";
+"ALERT_SUCCESFULLY" = "¡SUCCESS!";
 "ALERT_GALLERY" = "Gallery";
 "ALERT_CANCEL" = "Cancel";
 "ALERT_CAMERA" = "Camera";

@@ -21,7 +21,7 @@ class BookInfoViewModel {
     }
     
     func rentLibrary () {
-        bookRepository.fetchPost(id: bookDetails.id){ [weak self] rent in
+        bookRepository.fetchRentsBooks{ [weak self] rent in
             guard let _ = self else {
                 return
             }
