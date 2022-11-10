@@ -59,13 +59,12 @@ class BookInfoViewController: UIViewController {
         bookViewModel.rentLibrary()
     }
     
-    func alertConfiguration () {
-        let title = String(localized: "ALERT_BOOKED_SUCCESSFULLY")
-        let succesTitle = String(localized: "COMMENT_BOOKED_SUCCESFULLY")
-        let errorTitle = String(localized: "COMMENT_BOOKED_ERROR")
-        let noRentTitle = String(localized: "COMMENT_BOOKED_NO_RENT")
-        let noti = UIAlertController(title: title, message: succesTitle, preferredStyle: .alert)
-        let alert = UIAlertController(title: "OH NO!", message: noRentTitle, preferredStyle: .alert)
+    func alertConfiguration() {
+        let successtitle = NSLocalizedString(String(localized: "ALERT_SUCCESFULLY"), comment: "")
+        let succesMessage = NSLocalizedString(String(localized: "COMMENT_SUCCESSFULLY"), comment: "")
+        let noRentMessage = NSLocalizedString(String(localized: "COMMENT_NO_RENT"), comment: "")
+        let noti = UIAlertController(title: successtitle, message: succesMessage, preferredStyle: .alert)
+        let alert = UIAlertController(title: "OH NO!", message: noRentMessage, preferredStyle: .alert)
         
         if bookViewModel.isAvailable() {
             noti.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
